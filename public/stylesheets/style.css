@@ -187,10 +187,10 @@ button{
   border-radius: 1rem;
 }
 .about p{
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 0.2rem;
 }
 .about p:first-of-type{
-  margin-top: 4rem;
+  margin-top: 5rem;
   text-align: center;
 }
