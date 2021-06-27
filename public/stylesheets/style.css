@@ -1,0 +1,196 @@
+
+/* Nunito Font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+  font-size: 16px;
+  background-color: #040611;
+  color: #f0eee9;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+  padding: 0;
+  margin: 0;
+}
+h1{
+  font-size: 3rem;
+}
+h2{
+  font-size: 1.6rem;
+}
+h3{
+  color: #ff8800;
+}
+/* Header */
+#headerMain{  
+  position: absolute;
+  z-index: 1;
+  width: 99vw;
+  height: 130px;
+  background-image: url("/images/bg.png");
+  background-color: #242631;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#headerMain > div:nth-of-type(1){
+  margin: 30px;
+  margin-right: 15px;
+}
+nav{
+  position: absolute;
+  top: -600px;
+  left: 26px;
+  transition: top 0.2s;
+}
+nav.open{
+  top: 130px;
+}
+.logo > img{
+  width: 128px;
+  padding: 0.5rem;
+  height: auto;
+}
+.logo > img:focus, .logo > img:hover, .logo > img:active {
+  background-color: #2f3761;
+  border-radius: 2rem;
+}
+.links{
+  margin-left: auto;
+  margin-right: 30px;
+}
+.links img{
+  justify-self: flex-end;
+  width: 44px;
+  height: auto;
+  padding: 1.8rem;
+}
+.links img:focus, .links img:hover, .links img:active {
+  background-color: #2f3761;
+  border-radius: 2rem;
+  
+}
+nav a{
+  text-decoration: none;
+  color: unset;
+  padding: 0.8rem 1.4rem 0.8rem 1.4rem;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #2b335a;
+}
+nav ul li{
+  text-align: center;
+  font-size: 1.55rem;
+  padding: 0.8rem 0 0.8rem 0;
+  border-top: solid 1px #f0eee922;
+}
+nav ul li:first-of-type{
+  border-top: unset;
+}
+nav li:focus, nav li:hover, nav li:active{
+  background-color: #38499e; 
+}
+/* Main */
+main{
+  margin: auto;
+  width:76vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > *:first-child{
+  margin-top: 180px;
+}
+main > * {
+  margin-bottom: 1.5rem;
+}
+main h1,main h2,main h3{
+  text-align: center;
+}
+main p{
+  font-size: 1.4rem;
+  max-width: 50vw;
+}
+.portfolio{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.portfolio > *{
+  margin: 0 4rem 0 4rem;
+}
+.portfolio h2{
+  font-size: 2.5rem;
+  margin-bottom: 1.4rem;
+}
+.portfolio img{
+  width:25vw;
+  height: auto;
+  margin: 0.2rem 0 1rem 0;
+}
+/* Form */
+form{
+  font-size: 1.3rem;
+}
+fieldset{
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+fieldset > *{
+  margin-bottom: 1rem;
+}
+input, textarea{
+  border: none;
+  background-color: #f0eee9;
+}
+input{
+  max-width: 30%;
+}
+textarea{
+  resize: vertical;
+}
+button{
+  align-self: center;
+  width: 20%;
+}
+/* Home */
+.home{
+  text-align: center;
+}
+.home > h2{
+  
+  font-size: 3rem;
+}
+.home > h3{
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+.home > p{
+  font-size: 1.6rem;
+}
+/* About */
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-indent: 1rem;
+}
+.about img{
+  height: 300px;
+  width: 300px;
+  border-radius: 1rem;
+}
+.about p{
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+.about p:first-of-type{
+  margin-top: 4rem;
+  text-align: center;
+}
