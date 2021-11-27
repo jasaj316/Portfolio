@@ -96,7 +96,7 @@ nav li:focus, nav li:hover, nav li:active{
 }
 /* Main */
 main{
-  margin: auto;
+  margin-left: 1rem;
   width:76vw;
   height: 100vh;
   display: flex;
