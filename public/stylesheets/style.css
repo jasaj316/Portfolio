@@ -110,7 +110,7 @@ main > * {
   margin-bottom: 1.5rem;
 }
 main h1,main h2,main h3{
-  text-align: center;
+  text-align: left;
 }
 main p{
   font-size: 1.4rem;
@@ -135,6 +135,7 @@ main p{
 }
 /* Form */
 form{
+  margin: 0;
   font-size: 1.3rem;
 }
 fieldset{
@@ -174,8 +175,4 @@ button{
 .about p{
   font-size: 1.3rem;
   margin-bottom: 0.2rem;
-}
-.about p:first-of-type{
-  margin-top: 5rem;
-  text-align: center;
 }
