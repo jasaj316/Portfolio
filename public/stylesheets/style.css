@@ -96,12 +96,12 @@ nav li:focus, nav li:hover, nav li:active{
 }
 /* Main */
 main{
-  margin-left: 1rem;
+  margin-left: 2vw;
   width:76vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 main > *:first-child{
   margin-top: 180px;
@@ -158,21 +158,6 @@ textarea{
 button{
   align-self: center;
   width: 20%;
-}
-/* Home */
-.home{
-  text-align: center;
-}
-.home > h2{
-  
-  font-size: 3rem;
-}
-.home > h3{
-  font-size: 2rem;
-  margin-bottom: 5rem;
-}
-.home > p{
-  font-size: 1.6rem;
 }
 /* About */
 .about{
