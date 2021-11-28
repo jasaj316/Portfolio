@@ -128,16 +128,25 @@ article{
   font-size: 2.5rem;
   margin-bottom: 1.4rem;
 }
-.portfolio img{
-  width: 25vw;
-  height: auto;
-  margin: 0.2rem 0 1rem 0;
-}
+
 /* cards */
 .card{
-  display: flex;
   flex-direction: column;
   align-items: center;
+  background: #2b335a66;
+  border-radius: 0.5vw;
+  padding: 1vw;
+  display: flex;
+  margin-right: 1vw;
+}
+.card h3{
+  margin-bottom: 1rem;
+  font-size: 1.2vw;
+}
+.card img{
+  width: 28vw;
+  height: auto;
+
 }
 /* Default hidden items */
 .hidden{
