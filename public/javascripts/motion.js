@@ -22,11 +22,11 @@ const itemsTwo = document.querySelector("#items-two");
 // clicking link one
 linkOne.addEventListener("click", () => {
   //if one is hidden
-  if (itemsOne.classList("hidden")) {
+  if (itemsOne.classList.contains("hidden")) {
     //make one visible
     itemsOne.classList.remove("hidden");
     //if two is visible
-    if (!itemsTwo.classList("hidden")) {
+    if (!itemsTwo.classList.contains("hidden")) {
       // make two hidden
       itemsTwo.classList.add("hidden");
     }
@@ -40,11 +40,11 @@ linkOne.addEventListener("click", () => {
 })
 linkTwo.addEventListener("click", () => {
   //if two is hidden
-  if (itemsTwo.classList("hidden")) {
+  if (itemsTwo.classList.contains("hidden")) {
     //make two visible
     itemsTwo.classList.remove("hidden");
     //if one is visible
-    if (!itemsOne.classList("hidden")) {
+    if (!itemsOne.classList.contains("hidden")) {
       // make one hidden
       itemsOne.classList.add("hidden");
     }
