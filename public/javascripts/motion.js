@@ -19,12 +19,11 @@ const linkTwo = document.querySelector(".link-two");
 const itemsOne = document.querySelector(".items-one");
 const itemsTwo = document.querySelector(".items-two");
 
-window.addEventListener("click", (e) => {
-  if (e.target == linkOne) {
-    itemsOne.classList.toggle("hidden");
-  }
-  else if (e.target == linkTwo) {
-    itemsTwo.classList.toggle("hidden");
-  }
+linkOne.addEventListener("click", () => {
+  itemsOne.classList.toggle("hidden");
+})
+
+linkTwo.addEventListener("click", () => {
+  itemsTwo.classList.toggle("hidden");
 })
 // Portfolio
