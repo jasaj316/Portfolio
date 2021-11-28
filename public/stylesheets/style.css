@@ -115,7 +115,11 @@ main h1,main h2,main h3{
 main p{
   font-size: 1.4rem;
   max-width: 50vw;
+}/* Article */
+article{
+  padding: 0.35rem 0.75rem 0.625rem;
 }
+/* Portfolio */
 .portfolio{
   display: flex;
   justify-content: space-around;
@@ -164,7 +168,6 @@ button{
 .about{
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-indent: 1rem;
 }
 .about img{
@@ -175,4 +178,7 @@ button{
 .about p{
   font-size: 1.3rem;
   margin-bottom: 0.2rem;
+}
+.about p:first-of-type{
+  margin-block-start: 0;
 }
