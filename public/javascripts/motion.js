@@ -19,11 +19,41 @@ const linkTwo = document.querySelector("#link-two");
 const itemsOne = document.querySelector("#items-one");
 const itemsTwo = document.querySelector("#items-two");
 
+// clicking link one
 linkOne.addEventListener("click", () => {
-  itemsOne.classList.toggle("hidden");
-})
+  //if one is hidden
+  if (itemsOne.classList("hidden")) {
+    //make one visible
+    itemsOne.classList.remove("hidden");
+    //if two is visible
+    if (!itemsTwo.classList("hidden")) {
+      // make two hidden
+      itemsTwo.classList.add("hidden");
+    }
 
+  }
+  // else if one is already visible
+  else {
+    //  make one hidden
+    itemsOne.classList.add("hidden");
+  }
+})
 linkTwo.addEventListener("click", () => {
-  itemsTwo.classList.toggle("hidden");
+  //if two is hidden
+  if (itemsTwo.classList("hidden")) {
+    //make two visible
+    itemsTwo.classList.remove("hidden");
+    //if one is visible
+    if (!itemsOne.classList("hidden")) {
+      // make one hidden
+      itemsOne.classList.add("hidden");
+    }
+
+  }
+  // else if two is already visible
+  else {
+    //  make two hidden
+    itemsTwo.classList.add("hidden");
+  }
 })
 // Portfolio
