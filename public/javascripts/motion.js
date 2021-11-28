@@ -13,11 +13,11 @@ window.addEventListener("click", (e) => {
 // Menu
 
 // Portfolio
-const linkOne = document.querySelector(".link-one");
-const linkTwo = document.querySelector(".link-two");
+const linkOne = document.querySelector("#link-one");
+const linkTwo = document.querySelector("#link-two");
 
-const itemsOne = document.querySelector(".items-one");
-const itemsTwo = document.querySelector(".items-two");
+const itemsOne = document.querySelector("#items-one");
+const itemsTwo = document.querySelector("#items-two");
 
 linkOne.addEventListener("click", () => {
   itemsOne.classList.toggle("hidden");
