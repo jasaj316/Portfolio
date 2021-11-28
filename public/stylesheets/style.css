@@ -120,7 +120,7 @@ article{
   padding: 0.35rem 0.75rem 0.625rem;
 }
 /* Portfolio */
-.portfolio .items-one, .portfolio .items-two{
+#items-one, #items-two{
   display: flex;
   justify-content: space-around;
   flex-direction: row;
