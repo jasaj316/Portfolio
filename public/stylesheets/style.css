@@ -170,11 +170,6 @@ button{
   flex-direction: column;
   text-indent: 1rem;
 }
-.about img{
-  height: 300px;
-  width: 300px;
-  border-radius: 1rem;
-}
 .about p{
   font-size: 1.3rem;
   margin-bottom: 0.2rem;
