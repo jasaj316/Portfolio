@@ -136,7 +136,7 @@ article{
 }
 /* default hidden items */
 .hidden{
-  visibility: hidden;
+  display: none !important;
 }
 /* Form */
 form{
