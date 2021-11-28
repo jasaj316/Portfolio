@@ -38,6 +38,7 @@ linkOne.addEventListener("click", () => {
     itemsOne.classList.add("hidden");
   }
 })
+// clicking link two
 linkTwo.addEventListener("click", () => {
   //if two is hidden
   if (itemsTwo.classList.contains("hidden")) {

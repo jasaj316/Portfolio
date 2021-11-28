@@ -121,20 +121,25 @@ article{
 }
 /* Portfolio */
 #items-one, #items-two{
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
 }
 .portfolio h2{
   font-size: 2.5rem;
   margin-bottom: 1.4rem;
 }
 .portfolio img{
-  width:25vw;
+  width: 25vw;
   height: auto;
   margin: 0.2rem 0 1rem 0;
 }
-/* default hidden items */
+/* cards */
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Default hidden items */
 .hidden{
   display: none !important;
 }
