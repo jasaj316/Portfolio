@@ -147,6 +147,8 @@ article{
   display: flex;
   margin-right: 0.8vw;
   margin-bottom: 0.8vw;
+}
+.card{
   grid-area: "c";
 }
 .card-vid{
