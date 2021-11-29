@@ -124,7 +124,7 @@ article{
 #items-one {
   display: grid;
   grid-template: 
-    "cv cv c" 1fr
+    "v v c" 1fr
     "c c c" 1fr;
 }
 #items-two {
@@ -150,7 +150,7 @@ article{
   grid-area: "c";
 }
 .card-vid{
-  grid-area: "cv";
+  grid-area: "v";
 }
 .card h3{
   margin-bottom: 1rem;
