@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+var aboutRouter = require('./routes/about');
 var projectsRouter = require('./routes/projects');
 var contactRouter = require('./routes/contact');
 // External links router
@@ -22,8 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/about', indexRouter);
 app.use('/', projectsRouter);
+app.use('/about', aboutRouter);
 app.use('/contact', contactRouter);
 // External links router
 app.use('/external', externalRouter);
