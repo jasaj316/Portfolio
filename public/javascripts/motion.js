@@ -28,8 +28,9 @@ linkOne.addEventListener("click", () => {
     linkOne.innerHTML = "3D Art ▲";
     //if two is visible
     if (!itemsTwo.classList.contains("hidden")) {
-      // make two hidden
+      // make two hidden, change text
       itemsTwo.classList.add("hidden");
+      linkTwo.innerHTML = "3D Art ▼";
     }
 
   }
@@ -50,14 +51,15 @@ linkTwo.addEventListener("click", () => {
     linkTwo.innerHTML = "Web Dev ▲";
     //if one is visible
     if (!itemsOne.classList.contains("hidden")) {
-      // make one hidden
+      // make one hidden, change text
       itemsOne.classList.add("hidden");
+      linkOne.innerHTML = "Web Dev ▼";
     }
 
   }
   // else if two is already visible
   else {
-    //  make two hidden
+    //  make two hidden, change text
     itemsTwo.classList.add("hidden");
     linkTwo.innerHTML = "Web Dev ▼";
   }
