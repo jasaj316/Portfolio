@@ -47,7 +47,7 @@ linkTwo.addEventListener("click", () => {
   if (itemsTwo.classList.contains("hidden")) {
     //make two visible, change text
     itemsTwo.classList.remove("hidden");
-    linkOne.innerHTML = "Web Dev ▲";
+    linkTwo.innerHTML = "Web Dev ▲";
     //if one is visible
     if (!itemsOne.classList.contains("hidden")) {
       // make one hidden
@@ -59,7 +59,7 @@ linkTwo.addEventListener("click", () => {
   else {
     //  make two hidden
     itemsTwo.classList.add("hidden");
-    linkOne.innerHTML = "Web Dev ▼";
+    linkTwo.innerHTML = "Web Dev ▼";
   }
 })
 // Portfolio
