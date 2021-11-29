@@ -144,7 +144,7 @@ article{
 .card-vid{
   grid-column-start: span 2;
 }
-.card h3{
+.card h3, .card-vid h3{
   margin-bottom: 1rem;
   font-size: 1.2vw;
 }
