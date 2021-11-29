@@ -23,8 +23,9 @@ const itemsTwo = document.querySelector("#items-two");
 linkOne.addEventListener("click", () => {
   //if one is hidden
   if (itemsOne.classList.contains("hidden")) {
-    //make one visible
+    //make one visible, change text
     itemsOne.classList.remove("hidden");
+    linkOne.innerHTML = "3D Art ▲";
     //if two is visible
     if (!itemsTwo.classList.contains("hidden")) {
       // make two hidden
@@ -34,16 +35,19 @@ linkOne.addEventListener("click", () => {
   }
   // else if one is already visible
   else {
-    //  make one hidden
+    // make one hidden, change text
     itemsOne.classList.add("hidden");
+    linkOne.innerHTML = "3D Art ▼";
   }
 })
+
 // clicking link two
 linkTwo.addEventListener("click", () => {
   //if two is hidden
   if (itemsTwo.classList.contains("hidden")) {
-    //make two visible
+    //make two visible, change text
     itemsTwo.classList.remove("hidden");
+    linkOne.innerHTML = "Web Dev ▲";
     //if one is visible
     if (!itemsOne.classList.contains("hidden")) {
       // make one hidden
@@ -55,6 +59,7 @@ linkTwo.addEventListener("click", () => {
   else {
     //  make two hidden
     itemsTwo.classList.add("hidden");
+    linkOne.innerHTML = "Web Dev ▼";
   }
 })
 // Portfolio
