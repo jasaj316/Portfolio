@@ -123,14 +123,14 @@ article{
 /* Portfolio */
 #items-one {
   display: grid;
-  grid-template: 
-    "v v c" 1fr
-    "c c c" 1fr;
+  grid-template-areas: 
+    "v v c"
+    "c c c";
 }
 #items-two {
   display: grid;
-  grid-template: 
-    "c c c" 1fr;
+  grid-template-areas: 
+    "c c c";
 }
 .portfolio h2{
   font-size: 2.5rem;
