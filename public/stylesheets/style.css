@@ -4,6 +4,8 @@
 
 body {
   font-size: 16px;
+  
+  background-image: url("/images/bg.png");
   background-color: #040611;
   color: #f0eee9;
   font-family: "Inter", Helvetica, Arial, sans-serif;
@@ -25,7 +27,7 @@ h3{
 #headerMain{  
   position: absolute;
   z-index: 1;
-  width: 99vw;
+  width: 100vw;
   height: 130px;
   background-image: url("/images/bg.png");
   background-color: #242631;
