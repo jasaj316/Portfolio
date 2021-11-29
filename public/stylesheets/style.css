@@ -54,7 +54,7 @@ nav.open{
 }
 .logo > img:focus, .logo > img:hover, .logo > img:active {
   background-color: #2f3761;
-  border-radius: 2rem;
+  border-radius: 0.2rem;
 }
 .links{
   margin-left: auto;
@@ -68,7 +68,7 @@ nav.open{
 }
 .links img:focus, .links img:hover, .links img:active {
   background-color: #2f3761;
-  border-radius: 2rem;
+  border-radius: 0.2rem;
   
 }
 nav a{
@@ -134,10 +134,11 @@ article{
   flex-direction: column;
   align-items: center;
   background: #2b335a66;
-  border-radius: 0.5vw;
+  border-radius: 0.2rem;
   padding: 1vw;
   display: flex;
-  margin-right: 1vw;
+  margin-right: 0.8vw;
+  margin-bottom: 0.8vw;
 }
 .card h3{
   margin-bottom: 1rem;
