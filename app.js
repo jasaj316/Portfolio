@@ -22,8 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/projects', projectsRouter);
+app.use('/about', indexRouter);
+app.use('/', projectsRouter);
 app.use('/contact', contactRouter);
 // External links router
 app.use('/external', externalRouter);
