@@ -121,9 +121,16 @@ article{
   padding: 0.35rem 0.75rem 0.625rem;
 }
 /* Portfolio */
-#items-one, #items-two{
+#items-one {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template: 
+    "cv cv c" 1fr
+    "c c c" 1fr;
+}
+#items-two {
+  display: grid;
+  grid-template: 
+    "c c c" 1fr;
 }
 .portfolio h2{
   font-size: 2.5rem;
@@ -131,7 +138,7 @@ article{
 }
 
 /* cards */
-.card{
+.card, .card-vid{
   flex-direction: column;
   align-items: center;
   background: #2b335a66;
@@ -140,6 +147,10 @@ article{
   display: flex;
   margin-right: 0.8vw;
   margin-bottom: 0.8vw;
+  grid-area: "c";
+}
+.card-vid{
+  grid-area: "cv";
 }
 .card h3{
   margin-bottom: 1rem;
