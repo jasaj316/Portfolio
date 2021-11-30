@@ -128,8 +128,8 @@ article{
 }
 /* Portfolio */
 #demo-reel{
-  width: 0.55vw; 
-  height: 0.356vw;
+  width: 55vw; 
+  height: 35.6vw;
 }
 #items-one, #items-two{
   display: grid;
