@@ -188,8 +188,8 @@ textarea{
   resize: vertical;
 }
 button{
-  align-self: center;
   width: 20%;
+  font-weight: 600;
 }
 /* About */
 .about{
