@@ -19,18 +19,20 @@ const linkTwo = document.querySelector("#link-two");
 const itemsOne = document.querySelector("#items-one");
 const itemsTwo = document.querySelector("#items-two");
 
+const textOne = ["3D Art ▼", "3D Art ▲"];
+const textTwo = ["Web Dev ▼", "Web Dev ▲"];
 // clicking link one
 linkOne.addEventListener("click", () => {
   //if one is hidden
   if (itemsOne.classList.contains("hidden")) {
     //make one visible, change text
     itemsOne.classList.remove("hidden");
-    linkOne.innerHTML = "3D Art ▲";
+    linkOne.innerHTML = textOne[1];
     //if two is visible
     if (!itemsTwo.classList.contains("hidden")) {
       // make two hidden, change text
       itemsTwo.classList.add("hidden");
-      linkTwo.innerHTML = "3D Art ▼";
+      linkTwo.innerHTML = textTwo[0];
     }
 
   }
@@ -38,7 +40,7 @@ linkOne.addEventListener("click", () => {
   else {
     // make one hidden, change text
     itemsOne.classList.add("hidden");
-    linkOne.innerHTML = "3D Art ▼";
+    linkOne.innerHTML = textOne[0];
   }
 })
 
@@ -48,12 +50,12 @@ linkTwo.addEventListener("click", () => {
   if (itemsTwo.classList.contains("hidden")) {
     //make two visible, change text
     itemsTwo.classList.remove("hidden");
-    linkTwo.innerHTML = "Web Dev ▲";
+    linkTwo.innerHTML = textTwo[1];
     //if one is visible
     if (!itemsOne.classList.contains("hidden")) {
       // make one hidden, change text
       itemsOne.classList.add("hidden");
-      linkOne.innerHTML = "Web Dev ▼";
+      linkOne.innerHTML = textOne[0];
     }
 
   }
@@ -61,7 +63,7 @@ linkTwo.addEventListener("click", () => {
   else {
     //  make two hidden, change text
     itemsTwo.classList.add("hidden");
-    linkTwo.innerHTML = "Web Dev ▼";
+    linkTwo.innerHTML = textTwo[0];
   }
 })
 // Portfolio
