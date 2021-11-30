@@ -70,7 +70,9 @@ nav.open{
 .links img:focus, .links img:hover, .links img:active {
   background-color: #2f3761;
   border-radius: 0.2rem;
-  
+}
+.links a{
+  text-decoration: none;
 }
 nav a{
   text-decoration: none;
