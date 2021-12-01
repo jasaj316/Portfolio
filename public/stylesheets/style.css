@@ -30,7 +30,7 @@ h3{
 #headerMain{  
   position: absolute;
   z-index: 1;
-  width: 100vw;
+  width: 100%;
   height: 130px;
   background-image: url("/images/bg.png");
   background-color: #171820;
@@ -107,8 +107,8 @@ nav li:focus, nav li:hover, nav li:active{
 }
 /* Footer */
 footer{  
-  margin: auto;
-  width: 100vw;
+  margin-top: auto;
+  width: 100%;
   height: 65px;
   background-image: url("/images/bg.png");
   background-color: #171820;
