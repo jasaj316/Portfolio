@@ -101,6 +101,20 @@ nav ul li:last-of-type{
 nav li:focus, nav li:hover, nav li:active{
   background-color: #38499e; 
 }
+/* Footer */
+footer{  
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 130px;
+  background-image: url("/images/bg.png");
+  background-color: #171820;
+  border-radius: 0 0 0.3rem 0.3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 /* Main */
 main{
   margin-left: 2vw;
