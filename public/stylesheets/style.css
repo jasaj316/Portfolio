@@ -1,7 +1,7 @@
 
-/* Nunito Font from google fonts */
+/* Nunito, Spartan from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@600&display=swap');
 body {
   display: flex;
   flex-direction: column;
@@ -18,7 +18,8 @@ h1, h2, h3, h4, h5, h6{
   margin: 0;
 }
 h1{
-  font-size: 3rem;
+  font-family: 'Spartan', sans-serif;
+  font-size: 2.7rem;
 }
 h2{
   font-size: 1.44rem;
@@ -27,7 +28,7 @@ h3{
   color: #ff8800;
 }
 /* Header */
-#headerMain{  
+#header-main{  
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -39,9 +40,13 @@ h3{
   flex-direction: row;
   align-items: center;
 }
-#headerMain > div:nth-of-type(1){
+
+#header-main > div:nth-of-type(1){
   margin: 30px;
   margin-right: 15px;
+}
+#header-main h2{
+  font-weight: 200;
 }
 nav{
   position: absolute;
@@ -109,13 +114,16 @@ nav li:focus, nav li:hover, nav li:active{
 footer{  
   margin-top: auto;
   width: 100%;
-  height: 65px;
+  height: 52px;
   background-image: url("/images/bg.png");
   background-color: #171820;
   border-radius: 0 0 0.3rem 0.3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+footer p{
+  color: #92939c;
 }
 /* Main */
 main{
