@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  
+  min-height: 100vh;
   font-size: 16px;
   background-image: url("/images/bg.png");
   background-color: #040611;
@@ -103,9 +107,7 @@ nav li:focus, nav li:hover, nav li:active{
 }
 /* Footer */
 footer{  
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
+  margin: auto;
   width: 100vw;
   height: 130px;
   background-image: url("/images/bg.png");
@@ -119,7 +121,6 @@ footer{
 main{
   margin-left: 2vw;
   width:76vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
