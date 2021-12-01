@@ -67,20 +67,12 @@ linkTwo.addEventListener("click", () => {
   }
 })
 // Portfolio
-let subject = "";
-let body = "";
-let formButton = "";
-// if contact is loaded, get the elements
-window.onload(() => {
-  if (document.location.pathname === "/contact") {
-    subject = document.querySelector("#subject");
-    body = document.querySelector("#body");
-    formButton = document.querySelector(".form-button");
-  }
-});
 
 // Form
-// populate mailto link with form data
 
+const subject = document.querySelector("#subject");
+const body = document.querySelector("#body");
+const formButton = document.querySelector(".form-button");
+// populate mailto link with form data
 
 // Form
