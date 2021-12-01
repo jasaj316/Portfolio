@@ -2,14 +2,14 @@
   <h1>{{title}}</h1>
   <h3>Send Me An Email</h3>
 </div>
-<form action="#" method="post">
+<form action="#" method="get">
   <fieldset>
-    <label for="name">Your name:</label>
-    <input type="text" name="name" id="name">
+    <label for="subject">Subject:</label>
+    <input type="text" name="subject" id="subject">
     <label for="message">Write your message here:</label>
-    <textarea name="message" id="message" cols="80" rows="10"></textarea>
+    <textarea name="body" id="body" cols="80" rows="10"></textarea>
   </fieldset>
   <fieldset>
-    <button type="reset">Send</button>
+    <a class="form-button" href="mailto:jasaj316@gmail.com?subject=&body=">Send</a>
   </fieldset>
 </form>
