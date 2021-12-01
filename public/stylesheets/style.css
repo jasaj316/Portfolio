@@ -109,7 +109,7 @@ nav li:focus, nav li:hover, nav li:active{
 footer{  
   margin: auto;
   width: 100vw;
-  height: 130px;
+  height: 65px;
   background-image: url("/images/bg.png");
   background-color: #171820;
   border-radius: 0 0 0.3rem 0.3rem;
