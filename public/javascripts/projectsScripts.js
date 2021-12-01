@@ -1,17 +1,3 @@
-// Menu
-const nav = document.querySelector("nav");
-const logo = document.querySelector("div.logo > img");
-
-
-window.addEventListener("click", (e) => {
-  if (e.path[0] == logo) {
-    nav.classList.toggle("open");
-  } else {
-    nav.classList.remove("open");
-  }
-});
-// Menu
-
 // Portfolio
 const linkOne = document.querySelector("#link-one");
 const linkTwo = document.querySelector("#link-two");
@@ -67,12 +53,3 @@ linkTwo.addEventListener("click", () => {
   }
 })
 // Portfolio
-
-// Form
-
-const subject = document.querySelector("#subject");
-const body = document.querySelector("#body");
-const formButton = document.querySelector(".form-button");
-// populate mailto link with form data
-
-// Form
