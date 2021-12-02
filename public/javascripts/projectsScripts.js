@@ -71,7 +71,7 @@ function addModal(e) {
 
 window.addEventListener("click", (e) => {
   //on click, remove any existing modal
-  if (document.querySelector(".modal-bg")) {
+  if (document.querySelector(".modal-bg") && e.target.innerHTML == "x") {
     removeModal();
   }
   //if clicking an img or the x, add a modal window
