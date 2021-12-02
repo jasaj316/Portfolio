@@ -73,7 +73,7 @@ window.addEventListener("click", (e) => {
     removeModal();
   }
   //if clicking img, add a modal window
-  if (e.target.nodeName == "IMG" && !e.target.hasAttribute("")) {
+  if (e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) {
     addModal(e)
   }
   else if (document.querySelector(".modal-bg")) {
