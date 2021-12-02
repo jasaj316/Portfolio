@@ -214,6 +214,7 @@ article{
   margin-right: 3rem;
   margin-top: 0;
   font-weight: 900;
+  max-width: unset;
 }
 .modal-img{
   position: fixed;
