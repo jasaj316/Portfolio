@@ -214,17 +214,10 @@ article{
   user-select: none;
   position: absolute;
   text-align: center;
-  background-color: #1b1c22cc;
-  border-radius: 1rem;
   font-size: 10rem;
   margin-top: -2rem;
   right: 2rem;
   font-weight: 900;
-  max-width: unset;
-  width: 8rem;
-}
-.modal-bg p:hover{
-  background-color: #1b1c22;
 }
 .modal-img{
   position: fixed;

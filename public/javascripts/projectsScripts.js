@@ -71,7 +71,7 @@ function removeModal() {
 function addModal(e) {
   //select main and insert the modal "beforeend"
   let main = document.querySelector("main");
-  main.insertAdjacentHTML("beforeend", `<div class="modal-bg"><p>x</p></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
+  main.insertAdjacentHTML("beforeend", `<div class="modal-bg"><p>✖</p></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
   //modalActive is true
   modalActive = true;
 }
@@ -81,7 +81,7 @@ window.addEventListener("click", (e) => {
   if ((e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) && !modalActive) {
     addModal(e)
   }
-  else if (modalActive && e.target.innerHTML == "x") {
+  else if (modalActive && e.target.innerHTML == "✖") {
     // if clicking x, remove modal if it exists
     removeModal();
   }
