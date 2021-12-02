@@ -56,10 +56,8 @@ linkTwo.addEventListener("click", () => {
 
 // Modal Images
 let selectedImg = "";
-let modalElements = `<div class="modal-bg"></div>
-<img src="${selectedImg}" alt="" class="modal-img">`;
-let modal = document.createAttribute("modal");
-modal.value = modalElements;
+let modalElements = document.createElement(`<div class="modal-bg"></div>
+<img src="${selectedImg}" alt="" class="modal-img">`);
 
 function removeModal() {
   let oldBg = document.querySelector(".modal-bg");
@@ -78,7 +76,7 @@ window.addEventListener("click", (e) => {
     // add the target src to the modal element
     selectedImg = e.target.src;
     // insert modal element
-    document.insertBefore(modal, itemsOne);
+    document.insertBefore(modalElements, itemsOne);
   }
   else {
     // if not clicking an image, remove modal
