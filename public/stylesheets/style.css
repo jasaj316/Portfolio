@@ -212,12 +212,14 @@ article{
 }
 .modal-bg p{
   user-select: none;
-  text-align: right;
-  font-size: 5rem;
-  margin-right: 3rem;
-  margin-top: 0;
+  position: absolute;
+  text-align: center;
+  font-size: 10rem;
+  margin-top: -1rem;
+  right: 2rem;
   font-weight: 900;
   max-width: unset;
+  width: 8rem;
 }
 .modal-img{
   position: fixed;

@@ -59,6 +59,7 @@ linkTwo.addEventListener("click", () => {
 let modalActive = false;
 
 function removeModal() {
+  //remove modal elements
   let oldBg = document.querySelector(".modal-bg");
   let oldImg = document.querySelector(".modal-img");
   oldBg.remove();
