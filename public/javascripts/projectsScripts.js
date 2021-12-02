@@ -66,7 +66,7 @@ function removeModal() {
 function addModal(e) {
   //select main and insert the modal "beforeend"
   let main = document.querySelector("main");
-  main.insertAdjacentHTML("beforeend", `<div class="modal-bg"></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
+  main.insertAdjacentHTML("beforeend", `<div class="modal-bg"><p>x</p></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
 }
 
 window.addEventListener("click", (e) => {
@@ -74,8 +74,8 @@ window.addEventListener("click", (e) => {
   if (document.querySelector(".modal-bg")) {
     removeModal();
   }
-  //if clicking img, add a modal window
-  if (e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) {
+  //if clicking an img or the x, add a modal window
+  if ((e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) || e.target.nodeName == "P") {
     addModal(e)
   }
   else if (document.querySelector(".modal-bg")) {
