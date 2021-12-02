@@ -76,7 +76,7 @@ window.addEventListener("click", (e) => {
     // add the target src to the modal element
     selectedImg = e.target.src;
     // insert modal element
-    itemsOne.insertAdjacentHTML(modalElements);
+    itemsOne.insertAdjacentHTML("beforebegin", modalElements);
   }
   else {
     // if not clicking an image, remove modal
