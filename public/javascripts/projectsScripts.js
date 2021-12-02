@@ -64,9 +64,9 @@ function removeModal() {
 }
 
 function addModal(e) {
-  //select main and insert the modal "after begin"
+  //select main and insert the modal "beforeend"
   let main = document.querySelector("main");
-  main.insertAdjacentHTML("afterbegin", `<div class="modal-bg"></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
+  main.insertAdjacentHTML("beforeend", `<div class="modal-bg"></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
 }
 
 window.addEventListener("click", (e) => {
