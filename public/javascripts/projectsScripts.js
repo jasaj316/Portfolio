@@ -78,8 +78,8 @@ window.addEventListener("click", (e) => {
     // insert modal element
     itemsOne.insertAdjacentHTML("beforebegin", modalElements);
   }
-  else {
+  else if (document.querySelector(".modal-bg")) {
     // if not clicking an image, remove modal
-    removeModal()
+    removeModal();
   }
 });
