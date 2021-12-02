@@ -64,7 +64,7 @@ function removeModal() {
 }
 
 function addModal(e) {
-  linkTwo.insertAdjacentHTML("beforebegin", `<div class="modal-bg"></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
+  linkOne.insertAdjacentHTML("beforebegin", `<div class="modal-bg"></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
 }
 
 window.addEventListener("click", (e) => {
@@ -73,7 +73,7 @@ window.addEventListener("click", (e) => {
     removeModal();
   }
   //if clicking img, add a modal window
-  if (e.target.nodeName == "IMG") {
+  if (e.target.nodeName == "IMG" && !e.target.hasAttribute("")) {
     addModal(e)
   }
   else if (document.querySelector(".modal-bg")) {
