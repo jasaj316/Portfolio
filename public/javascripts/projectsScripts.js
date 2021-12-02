@@ -64,7 +64,9 @@ function removeModal() {
 }
 
 function addModal(e) {
-  linkOne.insertAdjacentHTML("beforebegin", `<div class="modal-bg"></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
+  //select main and insert the modal "after begin"
+  let main = document.querySelector("main");
+  main.insertAdjacentHTML("afterbegin", `<div class="modal-bg"></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
 }
 
 window.addEventListener("click", (e) => {
