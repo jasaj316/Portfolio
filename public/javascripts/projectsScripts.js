@@ -59,8 +59,8 @@ linkTwo.addEventListener("click", () => {
 function removeModal() {
   let oldBg = document.querySelector(".modal-bg");
   let oldImg = document.querySelector(".modal-img");
-  document.removeChild(oldBg);
-  document.removeChild(oldImg);
+  oldBg.remove();
+  oldImg.remove();
 }
 
 function addModal(e) {
