@@ -75,11 +75,11 @@ window.addEventListener("click", (e) => {
     removeModal();
   }
   //if clicking an img or the x, add a modal window
-  if ((e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) || e.target.nodeName == "P") {
+  if (e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) {
     addModal(e)
   }
-  else if (document.querySelector(".modal-bg")) {
-    // if not clicking an image, remove modal
+  else if (document.querySelector(".modal-bg") && e.target.innerHTML == "x") {
+    // if clicking x, remove modal if it exists
     removeModal();
   }
 });
