@@ -55,9 +55,6 @@ linkTwo.addEventListener("click", () => {
 // Portfolio
 
 // Modal Images
-let selectedImg = "";
-let modalElements = `<div class="modal-bg"></div>
-<img src="${selectedImg}" alt="" class="modal-img">`;
 
 function removeModal() {
   let oldBg = document.querySelector(".modal-bg");
@@ -66,17 +63,18 @@ function removeModal() {
   document.removeChild(oldImg);
 }
 
+function addModal(e) {
+  itemsOne.insertAdjacentHTML("beforebegin", `<div class="modal-bg"></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
+}
+
 window.addEventListener("click", (e) => {
   //on click, remove any existing modal
   if (document.querySelector(".modal-bg")) {
     removeModal();
   }
-  //if clicking img, open the modal window
+  //if clicking img, add a modal window
   if (e.target.nodeName == "IMG") {
-    // add the target src to the modal element
-    selectedImg = e.target.src.slice(34);
-    // insert modal element
-    itemsOne.insertAdjacentHTML("beforebegin", modalElements);
+    addModal(e)
   }
   else if (document.querySelector(".modal-bg")) {
     // if not clicking an image, remove modal
