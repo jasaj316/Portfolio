@@ -74,7 +74,7 @@ window.addEventListener("click", (e) => {
   //if clicking img, open the modal window
   if (e.target.nodeName == "IMG") {
     // add the target src to the modal element
-    selectedImg = e.target.src;
+    selectedImg = e.target.src.slice(34);
     // insert modal element
     itemsOne.insertAdjacentHTML("beforebegin", modalElements);
   }
