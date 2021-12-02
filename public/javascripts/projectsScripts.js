@@ -53,3 +53,33 @@ linkTwo.addEventListener("click", () => {
   }
 })
 // Portfolio
+
+// Modal Images
+let selectedImg = "";
+const modalElements = `<div class="modal-bg"></div>
+<img src="${selectedImg}" alt="" class="modal-img">`;
+
+function removeModal() {
+  let oldBg = document.querySelector(".modal-bg");
+  let oldImg = document.querySelector(".modal-img");
+  document.removeChild(oldBg);
+  document.removeChild(oldImg);
+}
+
+window.addEventListener("click", (e) => {
+  //on click, remove any existing modal
+  if (document.querySelector(".modal-bg")) {
+    removeModal();
+  }
+  //if clicking img, open the modal window
+  if (e.target.nodeName == "IMG") {
+    // add the target src to the modal element
+    selectedImg = e.target.src;
+    // insert modal element
+    document.insertBefore(modalElements, itemsOne);
+  }
+  else {
+    // if not clicking an image, remove modal
+    removeModal()
+  }
+});
