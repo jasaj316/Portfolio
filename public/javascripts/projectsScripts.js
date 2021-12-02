@@ -76,10 +76,6 @@ function addModal(e) {
 }
 
 window.addEventListener("click", (e) => {
-  //on click, remove any existing modal
-  if (modalActive) {
-    removeModal();
-  }
   //if clicking a portfolio img, add a modal window if none is active
   if ((e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) && !modalActive) {
     addModal(e)
