@@ -211,7 +211,7 @@ article{
   right: 0;
 }
 .modal-bg p{
-  pointer-events:none;
+  user-select: none;
   text-align: right;
   font-size: 5rem;
   margin-right: 3rem;
