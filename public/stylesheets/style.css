@@ -214,12 +214,16 @@ article{
   user-select: none;
   position: absolute;
   text-align: center;
+  background-color: #1b1c22ee;
+  border-radius: 1rem;
   font-size: 10rem;
   margin-top: -1rem;
   right: 2rem;
   font-weight: 900;
   max-width: unset;
   width: 8rem;
+}.modal-bg p:hover{
+  background-color: #38499e;
 }
 .modal-img{
   position: fixed;
