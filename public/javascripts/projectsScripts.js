@@ -56,29 +56,35 @@ linkTwo.addEventListener("click", () => {
 
 // Modal Images
 
+let modalActive = false;
+
 function removeModal() {
   let oldBg = document.querySelector(".modal-bg");
   let oldImg = document.querySelector(".modal-img");
   oldBg.remove();
   oldImg.remove();
+  //modalActive is false
+  modalActive = false;
 }
 
 function addModal(e) {
   //select main and insert the modal "beforeend"
   let main = document.querySelector("main");
   main.insertAdjacentHTML("beforeend", `<div class="modal-bg"><p>x</p></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
+  //modalActive is true
+  modalActive = true;
 }
 
 window.addEventListener("click", (e) => {
   //on click, remove any existing modal
-  if (document.querySelector(".modal-bg") && e.target.innerHTML == "x") {
+  if (modalActive) {
     removeModal();
   }
-  //if clicking an img or the x, add a modal window
-  if (e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) {
+  //if clicking a portfolio img, add a modal window if none is active
+  if ((e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) && !modalActive) {
     addModal(e)
   }
-  else if (document.querySelector(".modal-bg") && e.target.innerHTML == "x") {
+  else if (modalActive && e.target.innerHTML == "x") {
     // if clicking x, remove modal if it exists
     removeModal();
   }
