@@ -49,15 +49,11 @@ h3{
 #header-main h2{
   font-weight: 200;
 }
-.logo > img{
+.logo img{
   width: 128px;
   margin-top: 0.2rem;
   padding: 0.5rem;
   height: auto;
-}
-.logo > img:focus, .logo > img:hover, .logo > img:active {
-  background-color: #2f3761;
-  border-radius: 0.2rem;
 }
 .links{
   margin-left: auto;
@@ -89,8 +85,8 @@ nav a{
   font-size: 1.55rem;
   padding: 4rem;
   border-left: 1px solid #f0eee9;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   color: unset;
   text-decoration: none;
 }
