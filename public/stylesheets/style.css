@@ -91,13 +91,16 @@ nav a{
   border-left: 1px solid #f0eee9;
   padding-top: 50px;
   padding-bottom: 50px;
+  color: unset;
+  text-decoration: none;
 }
-nav a:first-of-type{
+nav a:last-of-type{
   border-right: 1px solid #f0eee9;
 }
 nav a:focus, nav a:hover, nav a:active{
   color: #38499e;
   background-color: #ffffffbb;
+  font-weight: bolder;
 }
 
 /* Main */
