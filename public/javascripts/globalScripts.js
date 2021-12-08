@@ -1,4 +1,8 @@
-// Menu
+/*
+
+logo opening the nav
+
+//Menu
 const nav = document.querySelector("nav");
 const logo = document.querySelector("div.logo > img");
 
@@ -11,3 +15,5 @@ window.addEventListener("click", (e) => {
   }
 });
 // Menu
+
+*/

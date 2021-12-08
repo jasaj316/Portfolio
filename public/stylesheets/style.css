@@ -53,10 +53,6 @@ nav{
   position: absolute;
   top: -600px;
   left: 26px;
-  transition: top 0.2s;
-}
-nav.open{
-  top: 130px;
 }
 .logo > img{
   width: 128px;
