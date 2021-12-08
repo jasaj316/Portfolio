@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET contact page. */
+/* GET projects page. */
 router.get('/', function (req, res, next) {
   res.render('projects', { title: 'My Projects' });
 });

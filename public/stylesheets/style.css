@@ -99,12 +99,6 @@ nav ul li{
   padding: 0.8rem 0 0.8rem 0;
   border-top: solid 1px #f0eee922;
 }
-nav ul li:first-of-type{
-  border-top: unset;
-}
-nav ul li:last-of-type{
-  border-radius: 0 0 0.3rem 0.3rem;
-}
 nav li:focus, nav li:hover, nav li:active{
   background-color: #38499e; 
 }
