@@ -76,24 +76,28 @@ h3{
 .links a{
   text-decoration: none;
 }
-nav a{
-  text-decoration: none;
-  color: unset;
-  padding: 0.8rem 1.4rem 0.8rem 1.4rem;
-}
 nav {
+  display: flex;
+  align-items: center;
+  height: 130px;
   padding: 0;
   margin: 0;
-  list-style: none;
-  background-color: #2b335a;
+  margin-left: 2rem;
 }
-nav a{
+nav a{  
   text-align: center;
   font-size: 1.55rem;
-  padding: 0.8rem 0 0.8rem 0;
+  padding: 4rem;
+  border-right: 1px solid #f0eee9;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+nav a:first-of-type{
+  
 }
 nav a:focus, nav a:hover, nav a:active{
-  background-color: #38499e; 
+  color: #38499e;
+  background-color: #ffffffbb;
 }
 
 /* Main */
