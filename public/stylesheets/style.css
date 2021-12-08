@@ -144,6 +144,9 @@ article{
   margin-bottom: 1.4rem;
   user-select: none;
 }
+.portfolio h2:hover{
+  color: #ff8800;
+}
 
 /* cards */
 .card, .card-vid{
