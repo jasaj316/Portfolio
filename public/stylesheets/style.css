@@ -82,18 +82,18 @@ nav {
   height: 130px;
   padding: 0;
   margin: 0;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 nav a{  
   text-align: center;
   font-size: 1.55rem;
   padding: 4rem;
-  border-right: 1px solid #f0eee9;
+  border-left: 1px solid #f0eee9;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 nav a:first-of-type{
-  
+  border-right: 1px solid #f0eee9;
 }
 nav a:focus, nav a:hover, nav a:active{
   color: #38499e;
