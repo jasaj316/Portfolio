@@ -69,7 +69,8 @@ h3{
   padding: 1.8rem;
 }
 .links img:focus, .links img:hover, .links img:active {
-  background-color: #2f3761;
+  background-color: #0f1116;
+  filter: invert(100%);
   border-radius: 0.2rem;
 }
 .links a{
