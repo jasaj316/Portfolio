@@ -65,7 +65,7 @@ h3{
 .links img{
   justify-self: flex-end;
   width: 44px;
-  height: auto;
+  height: 44px;
   padding: 1.1rem;
 }
 .links img:focus, .links img:hover, .links img:active {
