@@ -187,11 +187,11 @@ article {
   flex-direction: column;
   align-items: center;
   background: #2f375f66;
-  border-radius: 0.2rem;
+  border-radius: 0.1rem;
   padding: 1vw;
   display: flex;
-  margin-right: 1vw;
-  margin-bottom: 1vw;
+  margin-right: 1.2vw;
+  margin-bottom: 1.2vw;
 }
 
 .card-vid {

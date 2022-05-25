@@ -24,7 +24,9 @@ linkOne.addEventListener("click", () => {
   }
   // else if one is already visible
   else {
-    // make one hidden, change text
+    // make one hidden, two visible, change text
+    itemsTwo.classList.remove("hidden");
+    linkTwo.innerHTML = textTwo[1];
     itemsOne.classList.add("hidden");
     linkOne.innerHTML = textOne[0];
   }
@@ -47,7 +49,9 @@ linkTwo.addEventListener("click", () => {
   }
   // else if two is already visible
   else {
-    //  make two hidden, change text
+    //  make two hidden, one visible, change text
+    itemsOne.classList.remove("hidden");
+    linkOne.innerHTML = textOne[1];
     itemsTwo.classList.add("hidden");
     linkTwo.innerHTML = textTwo[0];
   }
