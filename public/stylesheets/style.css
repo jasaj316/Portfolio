@@ -108,7 +108,7 @@ nav a {
   text-align: center;
   font-size: 1.6rem;
   padding: 3.6rem;
-  border-left: 1px solid #f0eee9;
+  border-left: 2px solid #f0eee9;
   padding-top: 22px;
   padding-bottom: 22px;
   color: unset;
@@ -116,7 +116,7 @@ nav a {
 }
 
 nav a:last-of-type {
-  border-right: 1px solid #f0eee9;
+  border-right: 2px solid #f0eee9;
 }
 
 nav a:focus,
@@ -164,10 +164,7 @@ article {
 #demo-reel {
   width: 52vw;
   height: 32.5vw;
-}
-
-.ytp-embed:not(.ad-showing) .ytp-title-text {
-  padding-top: 10px !important;
+  border: 3px solid #00000000;
 }
 
 #items-one,
@@ -213,13 +210,13 @@ article {
 .card img {
   width: 24vw;
   height: auto;
-  border: 3px solid #00000000;
+  border: 2px solid #00000000;
   border-radius: 0.1rem;
   cursor: pointer;
 }
 
 .card img:hover {
-  border: 3px solid #ff8800;
+  border: 2px solid #ff8800;
 }
 
 /* Default hidden items */
