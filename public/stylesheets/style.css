@@ -356,8 +356,8 @@ textarea {
     padding: 1rem;
   }
 
-  .hidden {
-    display: initial;
+  nav a:first-of-type {
+    display: inherit;
   }
 }
 
