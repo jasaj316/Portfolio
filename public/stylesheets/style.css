@@ -203,6 +203,7 @@ article {
 
 .card h3,
 .card-vid h3 {
+  margin-top: 0rem;
   margin-bottom: 1rem;
   font-size: 1.2vw;
 }
@@ -321,4 +322,32 @@ textarea {
 
 .about p:first-of-type {
   margin-block-start: 0;
+}
+
+/* Small screens */
+@media only screen and (max-width: 1160px) {
+
+  #items-one,
+  #items-two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card img {
+    width: 40vw;
+  }
+
+  #demo-reel {
+    width: 84.3vw;
+    height: 52.7vw;
+  }
+
+  .card h3,
+  .card-vid h3 {
+    margin-top: 0.5rem;
+    font-size: 2vw;
+  }
+
+  .nav a {
+    padding: 1rem;
+  }
 }
