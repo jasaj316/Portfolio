@@ -236,20 +236,6 @@ article {
   right: 0;
 }
 
-.modal-bg p {
-  user-select: none;
-  position: absolute;
-  text-align: center;
-  font-size: 9rem;
-  margin: 0;
-  margin-top: 1rem;
-  padding: 0 1rem 0 1rem;
-  right: 2rem;
-  font-weight: 900;
-  line-height: 8rem;
-  cursor: pointer;
-}
-
 .modal-img {
   position: fixed;
   z-index: 3;
@@ -259,6 +245,20 @@ article {
   margin-top: 1vh;
   height: 98vh;
   width: auto;
+}
+
+.modal-x {
+  user-select: none;
+  position: fixed;
+  z-index: 4;
+  text-align: center;
+  font-size: 8rem;
+  margin: 0;
+  margin-top: 1rem;
+  right: 2rem;
+  font-weight: 900;
+  line-height: 8rem;
+  cursor: pointer;
 }
 
 /* Form */
