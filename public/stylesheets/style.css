@@ -239,7 +239,7 @@ article {
 .modal-img {
   position: fixed;
   z-index: 3;
-  left: 16vw;
+  left: 0;
   right: 0;
   margin: auto;
   margin-top: 1vh;
