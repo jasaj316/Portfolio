@@ -327,7 +327,7 @@ textarea {
 }
 
 /* Medium screens */
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 1160px) and (min-width: 425px) {
 
   /* grid */
   #items-one,
@@ -361,7 +361,7 @@ textarea {
   }
 }
 
-/* Medium screens */
+/* Small screens */
 @media only screen and (max-width: 424px) {
 
   /* grid */
