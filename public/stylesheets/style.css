@@ -101,7 +101,7 @@ nav {
   align-items: center;
   padding: 0;
   margin: 0;
-  margin-left: 3rem;
+  margin-left: 3vw;
 }
 
 nav a {
@@ -327,7 +327,7 @@ textarea {
 }
 
 /* Medium screens */
-@media only screen and (min-width: 425px) and (max-width: 1160px) {
+@media only screen and (min-width: 942px) and (max-width: 1110px) {
 
   /* grid */
   #items-one,
@@ -362,7 +362,7 @@ textarea {
 }
 
 /* Small screens */
-@media only screen and (max-width: 424px) {
+@media only screen and (min-width: 500px) and (max-width: 942px) {
 
   /* grid */
   #items-one,
@@ -372,18 +372,18 @@ textarea {
 
   /* cards */
   .card img {
-    width: 43vw;
+    width: 40vw;
   }
 
   #demo-reel {
-    width: 90.2vw;
-    height: 56.3vw;
+    width: 84.3vw;
+    height: 52.7vw;
   }
 
   .card h3,
   .card-vid h3 {
     margin-top: 0.5rem;
-    font-size: 2.3vw;
+    font-size: 2vw;
   }
 
   /* nav */
