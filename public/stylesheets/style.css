@@ -383,6 +383,10 @@ textarea {
     width: 100vw;
   }
 
+  #header-main>div:nth-of-type(1) {
+    margin: auto;
+  }
+
   .title {
     display: none;
   }
