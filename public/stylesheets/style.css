@@ -327,7 +327,7 @@ textarea {
 }
 
 /* Media generals */
-@media only screen and (max-width: 1010px) {
+@media only screen and (max-width: 1060px) {
 
   /* form */
   fieldset {
@@ -368,7 +368,7 @@ textarea {
 }
 
 /* Medium screens */
-@media only screen and (min-width: 651px) and (max-width: 800px) {
+@media only screen and (min-width: 683px) and (max-width: 860px) {
 
   nav a:first-of-type {
     display: none;
@@ -376,7 +376,7 @@ textarea {
 }
 
 /* Small screens */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 682px) {
   .modal-img {
     margin-top: 0;
     height: auto;
