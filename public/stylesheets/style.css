@@ -368,7 +368,7 @@ textarea {
 }
 
 /* Medium screens */
-@media only screen and (min-width: 683px) and (max-width: 860px) {
+@media only screen and (min-width: 721px) and (max-width: 860px) {
 
   nav a:first-of-type {
     display: none;
@@ -376,7 +376,7 @@ textarea {
 }
 
 /* Small screens */
-@media only screen and (max-width: 682px) {
+@media only screen and (max-width: 720px) {
   .modal-img {
     margin-top: 0;
     height: auto;
@@ -387,8 +387,18 @@ textarea {
     display: none;
   }
 
+  nav {
+    margin-left: auto;
+  }
+
   nav a:first-of-type {
     display: none;
+  }
+
+  nav a {
+    right: auto;
+    padding-left: calc(2vw * 3);
+    padding-right: calc(2vw * 3);
   }
 
   .links {
