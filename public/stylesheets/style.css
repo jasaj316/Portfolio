@@ -203,7 +203,7 @@ article {
 
 .card h3,
 .card-vid h3 {
-  margin-top: 0rem;
+  margin-top: calc(1rem - 1vw);
   margin-bottom: 1rem;
   font-size: 1.4vw;
 }
@@ -347,7 +347,6 @@ textarea {
 
   .card h3,
   .card-vid h3 {
-    margin-top: calc(1rem - 1vw);
     font-size: calc(2rem - 1vw);
   }
 
@@ -382,7 +381,6 @@ textarea {
 
   .card h3,
   .card-vid h3 {
-    margin-top: calc(1rem - 1vw);
     font-size: calc(2rem - 1vw);
   }
 
