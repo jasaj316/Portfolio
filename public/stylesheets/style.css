@@ -355,13 +355,6 @@ textarea {
     padding: 1rem;
   }
 
-  .title {
-    display: inherit;
-  }
-
-  nav a:first-of-type {
-    display: inherit;
-  }
 }
 
 /* Small screens */
@@ -391,10 +384,6 @@ textarea {
   /* nav */
   nav a {
     padding: 1rem;
-  }
-
-  .title {
-    display: inherit;
   }
 
   nav a:first-of-type {
