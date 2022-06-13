@@ -368,7 +368,7 @@ textarea {
 }
 
 /* Medium screens */
-@media only screen and (min-width: 701px) and (max-width: 860px) {
+@media only screen and (min-width: 681px) and (max-width: 860px) {
 
   nav a:first-of-type {
     display: none;
@@ -376,7 +376,7 @@ textarea {
 }
 
 /* Small screens */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 680px) {
   .modal-img {
     margin-top: 0;
     height: auto;
