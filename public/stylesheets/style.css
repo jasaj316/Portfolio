@@ -370,6 +370,11 @@ textarea {
 
 /* Small screens */
 @media only screen and (min-width: 430px) and (max-width: 755px) {
+  .modal-img {
+    margin-top: 0;
+    height: auto;
+    width: 100vw;
+  }
 
   .title {
     display: none;
