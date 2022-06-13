@@ -63,9 +63,9 @@ h3 {
 }
 
 .logo img {
-  width: 116px;
+  width: calc(2vw + 90px);
   margin-top: 0.2rem;
-  padding: 0.5rem;
+  padding: 0.1rem;
   height: auto;
 }
 
@@ -354,7 +354,8 @@ textarea {
 
   /* nav */
   nav a {
-    padding: 1rem;
+    padding-left: calc(.6rem + 1.4vw);
+    padding-right: calc(.6rem + 1.4vw);
   }
 
 }
