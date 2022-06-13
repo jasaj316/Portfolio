@@ -361,7 +361,7 @@ textarea {
 }
 
 /* Medium screens */
-@media only screen and (min-width: 776px) and (max-width: 942px) {
+@media only screen and (min-width: 756px) and (max-width: 922px) {
 
   nav a:first-of-type {
     display: none;
@@ -369,7 +369,7 @@ textarea {
 }
 
 /* Small screens */
-@media only screen and (min-width: 445px) and (max-width: 775px) {
+@media only screen and (min-width: 430px) and (max-width: 755px) {
 
   .title {
     display: none;
@@ -381,8 +381,12 @@ textarea {
 }
 
 /* Tiny screens */
-@media only screen and (max-width: 444px) {
-
+@media only screen and (max-width: 429px) {
+  .modal-img {
+    margin-top: 0;
+    height: auto;
+    width: 100vw;
+  }
 
   .links a:first-of-type {
     display: none;
