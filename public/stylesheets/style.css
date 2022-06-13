@@ -81,7 +81,7 @@ h3 {
 .links img {
   justify-self: flex-end;
   height: calc(1.8vw + 1.4rem);
-  padding: calc(0.7rem + 0.5vw);
+  padding: calc(0.15rem + 0.8vw);
 }
 
 .links img:focus,
@@ -327,7 +327,7 @@ textarea {
 }
 
 /* Media generals */
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1010px) {
 
   /* form */
   fieldset {
@@ -359,6 +359,7 @@ textarea {
   }
 
   /* nav */
+
   nav a {
     padding-left: calc(.6rem + 1.4vw);
     padding-right: calc(.6rem + 1.4vw);
@@ -367,7 +368,7 @@ textarea {
 }
 
 /* Medium screens */
-@media only screen and (min-width: 751px) and (max-width: 900px) {
+@media only screen and (min-width: 651px) and (max-width: 800px) {
 
   nav a:first-of-type {
     display: none;
@@ -375,7 +376,7 @@ textarea {
 }
 
 /* Small screens */
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 650px) {
   .modal-img {
     margin-top: 0;
     height: auto;
@@ -388,5 +389,10 @@ textarea {
 
   nav a:first-of-type {
     display: none;
+  }
+
+  .links {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
