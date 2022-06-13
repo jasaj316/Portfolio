@@ -75,7 +75,7 @@ h3 {
 
 .links {
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 2.5vw;
 }
 
 .links img {
@@ -347,7 +347,7 @@ textarea {
 
   .card h3,
   .card-vid h3 {
-    font-size: calc(2rem - 1vw);
+    font-size: calc(.3rem + 1.4vw)
   }
 
   /* nav */
@@ -361,7 +361,7 @@ textarea {
 }
 
 /* Small screens */
-@media only screen and (min-width: 805px) and (max-width: 942px) {
+@media only screen and (min-width: 795px) and (max-width: 942px) {
 
   /* grid */
   #items-one,
@@ -377,11 +377,6 @@ textarea {
   #demo-reel {
     width: 84.3vw;
     height: 52.7vw;
-  }
-
-  .card h3,
-  .card-vid h3 {
-    font-size: calc(2rem - 1vw);
   }
 
   /* nav */
