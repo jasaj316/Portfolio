@@ -344,9 +344,12 @@ textarea {
     height: 52.7vw;
   }
 
-  .card h3,
-  .card-vid h3 {
+  .card h3 {
     font-size: calc(.1rem + 1.7vw);
+  }
+
+  .card-vid h3 {
+    font-size: calc(.6rem + 1.2vw);
   }
 
   /* nav */
