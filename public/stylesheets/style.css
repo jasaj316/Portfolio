@@ -346,7 +346,7 @@ textarea {
 
   .card h3,
   .card-vid h3 {
-    font-size: calc(.3rem + 1.4vw)
+    font-size: calc(.1rem + 1.7vw);
   }
 
   /* nav */
