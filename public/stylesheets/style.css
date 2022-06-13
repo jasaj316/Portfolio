@@ -54,8 +54,8 @@ h3 {
 }
 
 #header-main>div:nth-of-type(1) {
-  margin: 30px;
-  margin-right: 15px;
+  margin: 2.5vw;
+  margin-right: 1vw;
 }
 
 #header-main h2 {
@@ -80,9 +80,8 @@ h3 {
 
 .links img {
   justify-self: flex-end;
-  width: 44px;
   height: 44px;
-  padding: 1.1rem;
+  padding: calc(0.7rem + 0.5vw);
 }
 
 .links img:focus,
