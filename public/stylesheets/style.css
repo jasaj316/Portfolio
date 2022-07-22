@@ -208,7 +208,8 @@ article {
   font-size: 1.05vw;
 }
 
-h3 span {
+.card h3 span,
+.card-vid h3 span {
   font-weight: lighter;
 }
 
