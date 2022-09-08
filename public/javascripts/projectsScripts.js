@@ -56,7 +56,6 @@ linkTwo.addEventListener("click", () => {
     linkTwo.innerHTML = textTwo[0];
   }
 })
-// Portfolio
 
 // Modal Images
 
@@ -87,7 +86,7 @@ window.addEventListener("click", (e) => {
   if ((e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) && !modalActive) {
     addModal(e)
   }
-  else if (modalActive && e.target.innerHTML == "✖") {
+  else if (modalActive) {
     // if clicking x, remove modal if it exists
     removeModal();
   }
