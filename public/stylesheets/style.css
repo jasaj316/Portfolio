@@ -128,6 +128,20 @@ nav a:active {
   font-weight: bolder;
 }
 
+/* Footer */
+footer {
+  flex-direction: column;
+  align-items: center;
+  background: #8498ff1c;
+  display: flex;
+}
+
+footer p {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.016rem;
+}
+
+
 /* Main */
 main {
   margin: auto;
