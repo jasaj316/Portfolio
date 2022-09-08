@@ -65,10 +65,8 @@ function removeModal() {
   //remove modal elements
   let oldBg = document.querySelector(".modal-bg");
   let oldImg = document.querySelector(".modal-img");
-  let oldX = document.querySelector(".modal-x");
   oldBg.remove();
   oldImg.remove();
-  oldX.remove();
   //modalActive is false
   modalActive = false;
 }
