@@ -130,14 +130,14 @@ nav a:active {
 
 /* Footer */
 footer {
-  flex-direction: column;
-  align-items: center;
-  background: #8498ff1c;
-  display: flex;
+  text-align: center;
+  background: #8498ff0a;
 }
 
 footer p {
   font-family: 'Inter', sans-serif;
+  color: #f0eee9c9;
+  font-size: 0.9rem;
   letter-spacing: -0.016rem;
 }
 
