@@ -312,6 +312,7 @@ input {
 
 textarea {
   resize: vertical;
+  margin-bottom: 0.1rem;
 }
 
 .form-button {
