@@ -393,7 +393,7 @@ form p>i>span {
 
 }
 
-/* Medium screens */
+/* Medium screens - remove portfolio link */
 @media only screen and (min-width: 681px) and (max-width: 860px) {
 
   nav a:first-of-type {
@@ -434,5 +434,24 @@ form p>i>span {
   .links {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+/* Tiny screens */
+@media only screen and (max-width: 400px) {
+
+  main h1,
+  main h2,
+  main h3 {
+    text-align: center;
+    padding: 0rem 1rem;
+  }
+
+  input {
+    max-width: 60%;
+  }
+
+  .form-button {
+    width: 28%;
   }
 }
