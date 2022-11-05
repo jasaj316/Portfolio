@@ -331,6 +331,10 @@ textarea {
   background-color: #ff8800;
 }
 
+form p>span {
+  color: #ff8800;
+}
+
 /* About */
 .about {
   display: flex;
