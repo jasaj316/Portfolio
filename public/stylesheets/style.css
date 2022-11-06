@@ -45,7 +45,7 @@ h3 {
 #header-main {
   position: absolute;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
   height: 124px;
   background-image: url("/images/bg.png");
   background-color: #171820;
@@ -131,7 +131,7 @@ nav a:active {
 /* Footer */
 footer {
   text-align: center;
-  background: #8498ff0a;
+  background: #1718217d;
 }
 
 footer p {
