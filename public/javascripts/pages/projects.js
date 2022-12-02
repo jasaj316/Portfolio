@@ -8,8 +8,8 @@ export const projects = `
     <h2 id="link-one" class="hidden">3D Art ▼</h2>
     <div id="items-one">
       <div class="card-vid">
-        <h3>Environment Artist Demo Reel</h3>
-        <iframe id="demo-reel" src="https://www.youtube.com/embed/qGbjyyNtrJ8" title="YouTube video player"
+        <h3>College Demo Reel</h3>
+        <iframe id="demo-reel" src="https://www.youtube.com/embed/RGHsLdklNec" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
