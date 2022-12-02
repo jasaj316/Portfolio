@@ -75,7 +75,8 @@ export function projectsScripts() {
   function addModal(e) {
     //select main and insert the modal "beforeend"
     let main = document.querySelector("main");
-    main.insertAdjacentHTML("beforeend", `<div class="modal-bg"></div><img src="${e.target.src.slice(34)}" class="modal-img">`);
+    console.log(e.target.src.slice(25));
+    main.insertAdjacentHTML("beforeend", `<div class="modal-bg"></div><img src="./${e.target.src.slice(25)}" class="modal-img">`);
     //modalActive is true
     modalActive = true;
   }

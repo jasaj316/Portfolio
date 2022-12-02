@@ -1,32 +1,54 @@
 // importing page data
-import projects from "pages/projects.js";
-import about from "pages/about.js";
-import contact from "pages/contact.js";
+import { projects } from "./pages/projects.js";
+import { about } from "./pages/about.js";
+import { contact } from "./pages/contact.js";
 
 // importing scripts
-import projectsScripts from "scripts/projectsScripts.js";
-import aboutScripts from "scripts/aboutScripts.js";
-import contactScripts from "scripts/contactScripts.js";
+import { projectsScripts } from "./scripts/projectsScripts.js";
+import { contactScripts } from "./scripts/contactScripts.js";
 
+//page body
 let main = document.querySelector("main");
 
-let currentPage = "projects"
+// button links
+let buttonLogo = document.querySelector(".logo img");
+let buttonProjects = document.querySelector("nav a:nth-child(1)");
+let buttonContact = document.querySelector("nav a:nth-child(2)");
 
-// routing for loading pages, running page script
-function loadPage(pageScript) {
+// directory of pages and associated scripts
+const pageDir = [
+  ["projects", projectsScripts],
+  ["about"],
+  ["contact", contactScripts]
+];
+
+//setting home page
+let currentPage = pageDir[0];
+
+
+// routing for loading pages, running scripts
+function loadPage() {
   //create html inside main
-  if (currentPage == "projects") {
+  if (currentPage[0] == "projects") {
     main.innerHTML = projects;
   }
-  else if (currentPage == "about") {
+  else if (currentPage[0] == "about") {
     main.innerHTML = about;
   }
-  else if (currentPage == "contact") {
+  else if (currentPage[0] == "contact") {
     main.innerHTML = contact;
   }
   // run pagescript if it exists
-  if (pagescript) { pagescript(); };
+  for (let i = 1; i < currentPage.length; i++) {
+    if (currentPage[i]) { currentPage[i](); };
+  }
+
 };
 
+// setting up button links (hrefs)
+buttonLogo.addEventListener("click", () => { currentPage = pageDir[0]; loadPage(); })
+buttonProjects.addEventListener("click", () => { currentPage = pageDir[0]; loadPage(); })
+buttonContact.addEventListener("click", () => { currentPage = pageDir[2]; loadPage(); })
 
-loadPage(projectsScripts);
+//when the page is created, load the home page
+main.onload = loadPage();

@@ -8,7 +8,7 @@ body {
   justify-content: flex-start;
   min-height: 100vh;
   font-size: 16px;
-  background-image: url("/images/bg.png");
+  background-image: url("../images/bg.png");
   background-color: #040611;
   color: #f0eee9;
   font-family: "Inter", Helvetica, Arial, sans-serif;
@@ -47,7 +47,7 @@ h3 {
   z-index: 1;
   width: 100vw;
   height: 124px;
-  background-image: url("/images/bg.png");
+  background-image: url("../images/bg.png");
   background-color: #171820;
   border-radius: 0 0 0.1rem 0.1rem;
   display: flex;
@@ -120,9 +120,7 @@ nav a:last-of-type {
   border-right: 2px solid #f0eee9;
 }
 
-nav a:focus,
-nav a:hover,
-nav a:active {
+nav a:hover {
   color: #151515;
   background-color: #ffffff;
   font-weight: bolder;
