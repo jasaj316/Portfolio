@@ -1,5 +1,6 @@
+export const about = `
 <div>
-  <h1>{{title}}</h1>
+  <h1>About Me</h1>
   <h3>A Concise Autobiography</h3>
 </div>
 <article class="about">
@@ -24,4 +25,4 @@
     spent on individual tasks in order to complete assignments on schedule.
   <p> I am currently looking for employment in either of these fields, so if you like what you read, or saw in
     projects, contact me using the web form! </p>
-</article>
+</article>`

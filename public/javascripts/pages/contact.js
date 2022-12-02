@@ -1,5 +1,6 @@
+export const contact = `
 <div>
-  <h1>{{title}}</h1>
+  <h1>Contact Me</h1>
   <h3>Send Me An Email Using The Form</h3>
 </div>
 <form action="#" method="get">
@@ -17,5 +18,4 @@
       </i>
     </p>
   </fieldset>
-</form>
-<script src="/javascripts/contactScripts.js"></script>
+</form>`

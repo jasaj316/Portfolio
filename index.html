@@ -3,11 +3,11 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Justin Smith - 3D Artist / Generalist | {{title}}</title>
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>Justin Smith - 3D Artist / Generalist</title>
+  <link rel="icon" type="image/png" href="./public/images/favicon.png">
   <!--A modern alternative to CSS resets - necolas.github.io/normalize.css/-->
-  <link rel='stylesheet' href='/stylesheets/normalize.css' />
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='./public/stylesheets/normalize.css' />
+  <link rel='stylesheet' href='./public/stylesheets/style.css' />
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <div id="header-main">
       <div class="logo">
         <a href="/">
-          <img id="menu-button" src="/images/icon.png" alt="Menu Button">
+          <img id="menu-button" src="./public/images/icon.png" alt="Menu Button">
         </a>
       </div>
       <div class="title">
@@ -29,24 +29,24 @@
       <div class="links">
         <!-- Icons by https://fontawesome.com/v5.15/icons/ - License: https://fontawesome.com/license-->
         <a href="/external/github">
-          <img id="github-button" src="/images/github-brands.svg" alt="Github">
+          <img id="github-button" src="./public/images/github-brands.svg" alt="Github">
         </a>
         <a href="/external/linkedin">
-          <img id="linkedin-button" src="/images/linkedin-in-brands.svg" alt="LinkedIn">
+          <img id="linkedin-button" src="./public/images/linkedin-in-brands.svg" alt="LinkedIn">
         </a>
       </div>
     </div>
 
   </header>
   <main>
-    {{{body}}}
+
   </main>
   <footer>
     <p>
-      Site Created by Justin Smith. Hosted using Heroku.
+      Site Created by Justin Smith.
     </p>
   </footer>
-  <script src="/javascripts/globalScripts.js"></script>
+  <script type="module" src="./public/javascripts/controller.js"></script>
 </body>
 
 </html>

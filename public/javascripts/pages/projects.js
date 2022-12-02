@@ -1,5 +1,6 @@
+export const projects = `
 <div>
-  <h1>{{title}}</h1>
+  <h1>My Projects</h1>
   <h3>A selection of the things I've done</h3>
 </div>
 <div class="portfolio">
@@ -53,7 +54,7 @@
         <h3>Blizzard Art Contest Submission</h3>
         <img src="/images/blizzard.jpg" alt="blizzard art contest submisssion">
       </div>
-    </div>{{!--items-one--}}
+    </div>
   </article>
   <article class="two hidden">
     <h2 id="link-two">Web Dev ▼</h2>
@@ -72,5 +73,4 @@
       </div>
     </div>
   </article>
-</div>
-<script src="/javascripts/projectsScripts.js"></script>
+</div>`
