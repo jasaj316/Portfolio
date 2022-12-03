@@ -401,6 +401,15 @@ form p>i>span {
 
 /* Small screens */
 @media only screen and (max-width: 680px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
   .modal-img {
     margin-top: 0;
     height: auto;
