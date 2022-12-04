@@ -58,30 +58,99 @@ export function projectsScripts() {
     }
   })
 
-  // Modal Images
 
+
+  // Modal Images
   let modalActive = false;
 
   function removeModal() {
-    //remove modal elements
+    // enable scrolling
+    document.body.style.overflow = 'visible';
+    // remove modal elements
     let oldBg = document.querySelector(".modal-bg");
-    let oldImg = document.querySelector(".modal-img");
+    let oldImg = document.querySelector(".modal-img-container");
     oldBg.remove();
     oldImg.remove();
-    //modalActive is false
+    // modalActive is false
     modalActive = false;
   }
 
-  function addModal(e) {
-    //select main and insert the modal "beforeend"
-    let main = document.querySelector("main");
-    main.insertAdjacentHTML("beforeend", `<div class="modal-bg"></div><img src="./public${e.target.src.split(/public/)[1]}" class="modal-img">`);
-    //modalActive is true
-    modalActive = true;
+
+  // zooming in or out of an image
+  function scrollImg(e, img) {
+    // get computed image height as a number
+    let imgHeight = Number(window.getComputedStyle(img).height.split("px")[0]);
+    // set scroll amount
+    let scrollAmnt = e.deltaY / 2;
+
+    // if mouse is at the top of the image
+    if (e.y <= window.innerHeight / 2) {
+      // lock alignment to start when image is close to the height of window
+      if (imgHeight <= window.innerHeight - scrollAmnt * 2) {
+        img.style.alignSelf = 'start';
+      }
+    }
+    // if mouse is at the bottom of the image
+    else {
+      // lock alignment to end when image is same height as window
+      if (imgHeight <= window.innerHeight - scrollAmnt * 2) {
+        console.log(img.style.alignSelf);
+        img.style.alignSelf = 'end';
+      }
+    }
+
+    console.log(window.innerHeight, imgHeight)
+
+    // only zoom in to 4x
+    if (window.innerHeight * 4 > imgHeight) {
+      // if zooming in at bottom
+      if (e.deltaY < 0 && img.style.alignSelf == "end") {
+        img.style.height = `${imgHeight -= scrollAmnt}px`
+      }
+      // if zooming in at top
+      if (e.deltaY < 0 && img.style.alignSelf == "start") {
+        img.style.height = `${imgHeight -= scrollAmnt}px`
+      }
+    }
+    // only zoom out to screen size
+    if (window.innerHeight + scrollAmnt <= imgHeight) {
+      // if zooming out at bottom
+      if (e.deltaY > 0 && img.style.alignSelf == "end") {
+        img.style.height = `${imgHeight -= scrollAmnt}px`
+      }
+      // if zooming out at top
+      if (e.deltaY > 0 && img.style.alignSelf == "start") {
+        img.style.height = `${imgHeight -= scrollAmnt}px`
+      }
+    }
+
+
   }
 
+
+
+  function addModal(e) {
+    // select main and insert the modal "beforeend"
+    let main = document.querySelector("main");
+    main.insertAdjacentHTML("beforeend", `
+    <div class="modal-bg"></div>
+    <div class="modal-img-container">
+      <img src="./public${e.target.src.split(/public/)[1]}" class="modal-img">
+    </div>
+    `);
+    // modalActive is true
+    modalActive = true;
+    // prevent scrolling
+    document.body.style.overflow = 'hidden';
+    // add eventListener on image for scrolling
+    let img = document.querySelector(".modal-img");
+    img.addEventListener("wheel", (e) => {
+      scrollImg(e, img);
+    });
+  }
+  // eventListener for showing/hiding modal
   window.addEventListener("click", (e) => {
-    //if clicking a portfolio img, add a modal window if none is active
+    // if clicking a portfolio img, add a modal window if none is active
     if ((e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) && !modalActive) {
       addModal(e)
     }
@@ -90,4 +159,5 @@ export function projectsScripts() {
       removeModal();
     }
   });
+
 }
