@@ -81,8 +81,9 @@ export function projectsScripts() {
     // get computed image height as a number
     let imgHeight = Number(window.getComputedStyle(img).height.split("px")[0]);
     // set scroll amount
-    let scrollAmnt = e.deltaY / 2;
+    let scrollAmnt = e.deltaY;
 
+    // locking img aligns
     // if mouse is at the top of the image
     if (e.y <= window.innerHeight / 2) {
       // lock alignment to start when image is close to the height of window
@@ -99,8 +100,7 @@ export function projectsScripts() {
       }
     }
 
-    console.log(window.innerHeight, imgHeight)
-
+    // setting zoom heights
     // only zoom in to 4x
     if (window.innerHeight * 4 > imgHeight) {
       // if zooming in at bottom
