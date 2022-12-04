@@ -38,10 +38,13 @@ function loadPage() {
   else if (currentPage[0] == "contact") {
     main.innerHTML = contact;
   }
-  // run pagescript if it exists, remove reference to prevent duplicate scripts
+
+  // iterate through pagescripts
   for (let i = 1; i < currentPage.length; i++) {
+    // run pagescript if it exists
     if (currentPage[i]) {
       currentPage[i]();
+      // remove reference to prevent duplicate scripts
       currentPage[i] = false;
     };
   }
