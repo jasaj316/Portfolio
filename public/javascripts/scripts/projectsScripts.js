@@ -84,28 +84,26 @@ export function projectsScripts() {
     // get the percent value of mouse position
     let mouseXY = [Math.round(e.x / window.innerWidth * 100), Math.round(e.y / window.innerHeight * 100)];
     //set the speed of zooming
-    let zoomStep = 0.1;
+    let zoomStep = 0.2;
 
-    // move vertical mouse position closer to edges 
+    // weight vertical mouse position closer to edges 
     if (mouseXY[1] > 50) {
-      mouseXY[1] += (mouseXY[1] / 10);
+      mouseXY[1] += (mouseXY[1] / 5);
       if (mouseXY[1] > 100) {
         mouseXY[1] = 100
       }
     }
-    else if (mouseXY[1] < 50 && mouseXY[1] >= 0) {
-      mouseXY[1] -= (mouseXY[1] / 10);
+    else {
+      mouseXY[1] -= ((50 - mouseXY[1]) / 5);
       if (mouseXY[1] < 0) {
         mouseXY[1] = 0
       }
     }
-
     //nudge mouse position closer to last mouse position depending on zoom amount
     if (mouseXY) {
-      for (let i = zoomAmnt; i > 1; i = i - zoomStep * 10) {
+      for (let i = zoomAmnt; i > 1; i = i - zoomStep * 3) {
         mouseXY[0] = (mouseXY[0] + LastMouseXY[0]) / 2;
         mouseXY[1] = (mouseXY[1] + LastMouseXY[1]) / 2;
-        console.log(mouseXY[1], LastMouseXY[1], i);
       }
     }
 
@@ -114,7 +112,7 @@ export function projectsScripts() {
       if (zoomAmnt < 4) {
         zoomAmnt += zoomStep;
         // only change origin if zooming in
-        img.style.transformOrigin = `${(LastMouseXY[0] + 50) / 2}% ${mouseXY[1]}%`;
+        img.style.transformOrigin = `${LastMouseXY[0]}% ${mouseXY[1]}%`;
       }
     }
     // zoom out to screen size
