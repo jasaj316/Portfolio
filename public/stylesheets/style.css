@@ -255,7 +255,8 @@ article {
 }
 
 .modal-img {
-  height: 100%;
+  height: 100vh;
+  align-self: flex-end;
   width: auto;
 }
 

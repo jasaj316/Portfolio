@@ -75,79 +75,82 @@ export function projectsScripts() {
     modalActive = false;
   }
 
-
+  // global scoped zoom value (tracking outside scroll event)
+  let zoomAmnt = 1;
+  //last mouse position for averaging at high zoom levels
+  let LastMouseXY = false;
   // zooming in or out of an image
   function scrollImg(e, img) {
-    // get computed image height as a number
-    let imgHeight = Number(window.getComputedStyle(img).height.split("px")[0]);
-    // set scroll amount
-    let scrollAmnt = e.deltaY;
+    // get the percent value of mouse position
+    let mouseXY = [Math.round(e.x / window.innerWidth * 100), Math.round(e.y / window.innerHeight * 100)];
+    //set the speed of zooming
+    let zoomStep = 0.1;
 
-    // locking img aligns
-    // if mouse is at the top of the image
-    if (e.y <= window.innerHeight / 2) {
-      // lock alignment to start when image is close to the height of window
-      if (imgHeight <= window.innerHeight - scrollAmnt * 2) {
-        img.style.alignSelf = 'start';
+    // move vertical mouse position closer to edges 
+    if (mouseXY[1] > 50) {
+      mouseXY[1] += (mouseXY[1] / 10);
+      if (mouseXY[1] > 100) {
+        mouseXY[1] = 100
       }
     }
-    // if mouse is at the bottom of the image
-    else {
-      // lock alignment to end when image is same height as window
-      if (imgHeight <= window.innerHeight - scrollAmnt * 2) {
-        console.log(img.style.alignSelf);
-        img.style.alignSelf = 'end';
+    else if (mouseXY[1] < 50 && mouseXY[1] >= 0) {
+      mouseXY[1] -= (mouseXY[1] / 10);
+      if (mouseXY[1] < 0) {
+        mouseXY[1] = 0
       }
     }
 
-    // setting zoom heights
-    // only zoom in to 4x
-    if (window.innerHeight * 4 > imgHeight) {
-      // if zooming in at bottom
-      if (e.deltaY < 0 && img.style.alignSelf == "end") {
-        img.style.height = `${imgHeight -= scrollAmnt}px`
-      }
-      // if zooming in at top
-      if (e.deltaY < 0 && img.style.alignSelf == "start") {
-        img.style.height = `${imgHeight -= scrollAmnt}px`
-      }
-    }
-    // only zoom out to screen size
-    if (window.innerHeight + scrollAmnt <= imgHeight) {
-      // if zooming out at bottom
-      if (e.deltaY > 0 && img.style.alignSelf == "end") {
-        img.style.height = `${imgHeight -= scrollAmnt}px`
-      }
-      // if zooming out at top
-      if (e.deltaY > 0 && img.style.alignSelf == "start") {
-        img.style.height = `${imgHeight -= scrollAmnt}px`
+    //nudge mouse position closer to last mouse position depending on zoom amount
+    if (mouseXY) {
+      for (let i = zoomAmnt; i > 1; i = i - zoomStep * 10) {
+        mouseXY[0] = (mouseXY[0] + LastMouseXY[0]) / 2;
+        mouseXY[1] = (mouseXY[1] + LastMouseXY[1]) / 2;
+        console.log(mouseXY[1], LastMouseXY[1], i);
       }
     }
 
+    // zoom in to 4x
+    if (e.deltaY < 0) {
+      if (zoomAmnt < 4) {
+        zoomAmnt += zoomStep;
+        // only change origin if zooming in
+        img.style.transformOrigin = `${(LastMouseXY[0] + 50) / 2}% ${mouseXY[1]}%`;
+      }
+    }
+    // zoom out to screen size
+    if (e.deltaY > 0) {
+      if (zoomAmnt > 1) {
+        zoomAmnt -= zoomStep;
 
+      }
+    }
+    // set tranform scale
+    img.style.transform = `scale(${zoomAmnt})`
+    //set previous mouse position
+    LastMouseXY = mouseXY;
   }
-
-
 
   function addModal(e) {
     // select main and insert the modal "beforeend"
     let main = document.querySelector("main");
     main.insertAdjacentHTML("beforeend", `
     <div class="modal-bg"></div>
-    <div class="modal-img-container">
-      <img src="./public${e.target.src.split(/public/)[1]}" class="modal-img">
-    </div>
-    `);
+      <div class="modal-img-container">
+        <img src="./public${e.target.src.split(/public/)[1]}" class="modal-img">
+      </div>
+  `);
     // modalActive is true
     modalActive = true;
     // prevent scrolling
     document.body.style.overflow = 'hidden';
     // add eventListener on image for scrolling
-    let img = document.querySelector(".modal-img");
+    let imgContainer = document.querySelector(".modal-img-container");
+    let img = imgContainer.querySelector("img");
     img.addEventListener("wheel", (e) => {
-      scrollImg(e, img);
+      scrollImg(e, img, imgContainer);
     });
   }
+
   // eventListener for showing/hiding modal
   window.addEventListener("click", (e) => {
     // if clicking a portfolio img, add a modal window if none is active
