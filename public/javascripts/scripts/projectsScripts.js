@@ -88,13 +88,13 @@ export function projectsScripts() {
 
     // weight vertical mouse position closer to edges 
     if (mouseXY[1] > 50) {
-      mouseXY[1] += (mouseXY[1] / 5);
+      mouseXY[1] += (mouseXY[1] / (zoomAmnt * 5));
       if (mouseXY[1] > 100) {
         mouseXY[1] = 100
       }
     }
     else {
-      mouseXY[1] -= ((50 - mouseXY[1]) / 5);
+      mouseXY[1] -= ((50 - mouseXY[1]) / (zoomAmnt * 5));
       if (mouseXY[1] < 0) {
         mouseXY[1] = 0
       }
