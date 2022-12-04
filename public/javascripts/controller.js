@@ -38,11 +38,13 @@ function loadPage() {
   else if (currentPage[0] == "contact") {
     main.innerHTML = contact;
   }
-  // run pagescript if it exists
+  // run pagescript if it exists, remove reference to prevent duplicate scripts
   for (let i = 1; i < currentPage.length; i++) {
-    if (currentPage[i]) { currentPage[i](); };
+    if (currentPage[i]) {
+      currentPage[i]();
+      currentPage[i] = false;
+    };
   }
-
 };
 
 // setting up button links (hrefs)

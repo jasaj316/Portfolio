@@ -142,10 +142,9 @@ export function projectsScripts() {
     // prevent scrolling
     document.body.style.overflow = 'hidden';
     // add eventListener on image for scrolling
-    let imgContainer = document.querySelector(".modal-img-container");
-    let img = imgContainer.querySelector("img");
+    let img = document.querySelector(".modal-img");
     img.addEventListener("wheel", (e) => {
-      scrollImg(e, img, imgContainer);
+      scrollImg(e, img);
     });
   }
 
@@ -156,9 +155,8 @@ export function projectsScripts() {
       addModal(e)
     }
     else if (modalActive) {
-      // if clicking x, remove modal if it exists
+      // if clicking, remove modal if it exists
       removeModal();
     }
   });
-
 }
