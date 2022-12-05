@@ -1,44 +1,28 @@
-// importing page data
-import { projects } from "./pages/projects.js";
-import { about } from "./pages/about.js";
-import { contact } from "./pages/contact.js";
+let main = document.querySelector("main");
 
 // importing scripts
 import { projectsScripts } from "./scripts/projectsScripts.js";
 import { contactScripts } from "./scripts/contactScripts.js";
 
-//page body
-let main = document.querySelector("main");
-
-// button links
-let buttonLogo = document.querySelector(".logo img");
-let buttonProjects = document.querySelector("nav a:nth-child(1)");
-let buttonContact = document.querySelector("nav a:nth-child(2)");
-
-// directory of pages and associated scripts
+// directory of page titles and associated scripts
 const pageDir = [
   ["projects", projectsScripts],
   ["about"],
   ["contact", contactScripts]
 ];
 
-//setting home page
+// directory of button ids and associated pageDir #
+let buttonDir = [
+  [buttonLogo, 0],
+  [buttonProjects, 0],
+  [buttonContact, 2]
+];
+
+//setting home page once
 let currentPage = pageDir[0];
 
-
-// routing for loading pages, running scripts
-function loadPage() {
-  //create html inside main
-  if (currentPage[0] == "projects") {
-    main.innerHTML = projects;
-  }
-  else if (currentPage[0] == "about") {
-    main.innerHTML = about;
-  }
-  else if (currentPage[0] == "contact") {
-    main.innerHTML = contact;
-  }
-
+// load scripts after fetching html
+function loadScripts() {
   // iterate through pagescripts
   for (let i = 1; i < currentPage.length; i++) {
     // run pagescript if it exists
@@ -48,12 +32,29 @@ function loadPage() {
       currentPage[i] = false;
     };
   }
+}
+
+// fetching current html 
+function loadPage() {
+  // fetch html as text
+  fetch(`./public/pages/${currentPage[0]}.html`)
+    .then(resp => {
+      return resp.text();
+    })
+    .then(text => {
+      // put it in main
+      main.innerHTML = text;
+      // then load scripts
+      loadScripts();
+    })
 };
 
-// setting up button links (hrefs)
-buttonLogo.addEventListener("click", () => { currentPage = pageDir[0]; loadPage(); })
-buttonProjects.addEventListener("click", () => { currentPage = pageDir[0]; loadPage(); })
-buttonContact.addEventListener("click", () => { currentPage = pageDir[2]; loadPage(); })
+
+// adding listeners to buttons
+buttonDir.forEach(btn => {
+  // change current page and reload
+  btn[0].addEventListener("click", () => { currentPage = pageDir[btn[1]]; loadPage(); });
+});
 
 //when the page is created, load the home page
 main.onload = loadPage();
