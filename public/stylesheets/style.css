@@ -198,7 +198,7 @@ main h3 {
 
 main p {
   font-size: 1.4rem;
-  max-width: 50vw;
+  /* max-width: 50vw; */
 }
 
 /* Article */
@@ -384,6 +384,7 @@ form p>i>span {
 .about p {
   font-size: 1.3rem;
   margin-bottom: 0.2rem;
+  max-width: 60vw;
 }
 
 .about p:first-of-type {
@@ -433,7 +434,7 @@ form p>i>span {
 
 
 /* Small screens */
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 750px) {
   body {
     overflow-x: hidden !important;
   }
@@ -471,6 +472,10 @@ form p>i>span {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .about>p {
+    max-width: 80vw;
+  }
 }
 
 /* Tiny screens */
@@ -496,5 +501,9 @@ form p>i>span {
 
   .form-button {
     width: 28%;
+  }
+
+  .about>p {
+    max-width: 90vw;
   }
 }
