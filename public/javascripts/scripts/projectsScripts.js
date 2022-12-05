@@ -100,7 +100,7 @@ export function projectsScripts() {
       }
     }
     //nudge mouse position closer to last mouse position depending on zoom amount
-    if (mouseXY) {
+    if (LastMouseXY) {
       for (let i = zoomAmnt; i > 1; i = i - zoomStep * 3) {
         mouseXY[0] = (mouseXY[0] + LastMouseXY[0]) / 2;
         mouseXY[1] = (mouseXY[1] + LastMouseXY[1]) / 2;
