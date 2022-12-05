@@ -86,22 +86,22 @@ export function projectsScripts() {
     //set the speed of zooming
     let zoomStep = 0.2;
 
-    // weight vertical mouse position closer to edges 
+    // weigh vertical mouse position closer to edges 
     if (mouseXY[1] > 50) {
-      mouseXY[1] += (mouseXY[1] / (zoomAmnt * 5));
+      mouseXY[1] += (mouseXY[1] / (zoomAmnt * 4));
       if (mouseXY[1] > 100) {
         mouseXY[1] = 100
       }
     }
     else {
-      mouseXY[1] -= ((50 - mouseXY[1]) / (zoomAmnt * 5));
+      mouseXY[1] -= ((50 - mouseXY[1]) / (zoomAmnt * 4));
       if (mouseXY[1] < 0) {
         mouseXY[1] = 0
       }
     }
     //nudge mouse position closer to last mouse position depending on zoom amount
     if (LastMouseXY) {
-      for (let i = zoomAmnt; i > 1; i = i - zoomStep * 3) {
+      for (let i = zoomAmnt; i > 1; i = i - zoomStep * 2) {
         mouseXY[0] = (mouseXY[0] + LastMouseXY[0]) / 2;
         mouseXY[1] = (mouseXY[1] + LastMouseXY[1]) / 2;
       }

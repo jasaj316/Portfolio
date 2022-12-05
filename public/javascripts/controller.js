@@ -14,11 +14,11 @@ const pageDir = [
 // directory of button ids and associated pageDir #
 let buttonDir = [
   [buttonLogo, 0],
-  [buttonProjects, 0],
+  [buttonAbout, 1],
   [buttonContact, 2]
 ];
 
-//setting home page once
+// home page 
 let currentPage = pageDir[0];
 
 // load scripts after fetching html
