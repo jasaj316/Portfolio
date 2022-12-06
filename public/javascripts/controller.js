@@ -1,6 +1,6 @@
 let main = document.querySelector("main");
 
-// importing scripts
+// import scripts
 import { projectsScripts } from "./scripts/projectsScripts.js";
 import { contactScripts } from "./scripts/contactScripts.js";
 
@@ -18,51 +18,56 @@ let buttonDir = [
   [buttonContact, 2]
 ];
 
-// home page and hash
-let currentPage = pageDir[0];
-window.location = `#${currentPage[0]}`;
+// variable for tracking what page to direct to
+let currentPage = null
 
-// load scripts after fetching html
-function loadScripts() {
-  // iterate through pagescripts
-  for (let i = 1; i < currentPage.length; i++) {
-    // run pagescript if it exists
-    if (currentPage[i]) {
-      currentPage[i]();
-      // remove reference to prevent duplicate scripts
-      currentPage[i] = false;
-    };
+
+function changeCurrentPage() {
+  // set page to homepage if there is no hash
+  if (!window.location.href.split("#")[1] || window.location.href.split("#")[1] == null) {
+    currentPage = pageDir[0];
+    window.location = `#${currentPage[0]}`;
   }
-}
-
-// fetching current html 
-function loadPage() {
+  else {
+    // if there is a hash, set page to current pageDir
+    pageDir.forEach(page => {
+      if (window.location.href.split("#")[1] == page[0]) {
+        currentPage = page;
+      }
+    });
+  }
   // fetch html as text
-  fetch(`./public/pages/${window.location.href.split("#")[1]}.html`)
+  fetch(`./public/pages/${currentPage[0]}.html`)
     .then(resp => {
       return resp.text();
     })
     .then(text => {
       // put it in main
       main.innerHTML = text;
-      // then load scripts
-      loadScripts();
+      // iterate through pagescripts
+      for (let i = 1; i < currentPage.length; i++) {
+        // run pagescript if it exists
+        if (currentPage[i]) {
+          currentPage[i]();
+          // remove reference to prevent duplicate scripts
+          currentPage[i] = false;
+        };
+      }
     })
-};
+}
 
-// adding listeners to buttons
+
+// adding listeners to button events
 buttonDir.forEach(btn => {
   // change current page and hash
   btn[0].addEventListener("click", () => {
     currentPage = pageDir[btn[1]];
     window.location = `#${currentPage[0]}`;
+    console.log(currentPage);
   });
 });
-//  ||
-//  \/
-// adding listener to hash change
-window.addEventListener("hashchange", e => loadPage())
 
-
-// when site first loads, load the home page
-main.onload = loadPage();
+// adding listener for when hash is changed
+window.addEventListener("hashchange", changeCurrentPage);
+// adding listener for when site first loads
+window.addEventListener("load", changeCurrentPage);
