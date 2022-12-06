@@ -1,65 +1,4 @@
 export function projectsScripts() {
-  // Portfolio
-  const linkOne = document.querySelector("#link-one");
-  const linkTwo = document.querySelector("#link-two");
-
-  const itemsOne = document.querySelector("#items-one");
-  const itemsTwo = document.querySelector("#items-two");
-
-  const textOne = ["3D Art ▼", "3D Art ▲"];
-  const textTwo = ["Web Dev ▼", "Web Dev ▲"];
-  // clicking link one
-  linkOne.addEventListener("click", () => {
-    //if one is hidden
-    if (itemsOne.classList.contains("hidden")) {
-      //make one visible, change text
-      itemsOne.classList.remove("hidden");
-      linkOne.innerHTML = textOne[1];
-      //if two is visible
-      if (!itemsTwo.classList.contains("hidden")) {
-        // make two hidden, change text
-        itemsTwo.classList.add("hidden");
-        linkTwo.innerHTML = textTwo[0];
-      }
-
-    }
-    // else if one is already visible
-    else {
-      // make one hidden, two visible, change text
-      itemsTwo.classList.remove("hidden");
-      linkTwo.innerHTML = textTwo[1];
-      itemsOne.classList.add("hidden");
-      linkOne.innerHTML = textOne[0];
-    }
-  })
-
-  // clicking link two
-  linkTwo.addEventListener("click", () => {
-    //if two is hidden
-    if (itemsTwo.classList.contains("hidden")) {
-      //make two visible, change text
-      itemsTwo.classList.remove("hidden");
-      linkTwo.innerHTML = textTwo[1];
-      //if one is visible
-      if (!itemsOne.classList.contains("hidden")) {
-        // make one hidden, change text
-        itemsOne.classList.add("hidden");
-        linkOne.innerHTML = textOne[0];
-      }
-
-    }
-    // else if two is already visible
-    else {
-      //  make two hidden, one visible, change text
-      itemsOne.classList.remove("hidden");
-      linkOne.innerHTML = textOne[1];
-      itemsTwo.classList.add("hidden");
-      linkTwo.innerHTML = textTwo[0];
-    }
-  })
-
-
-
   // Modal Images
   let modalActive = false;
 
@@ -114,12 +53,14 @@ export function projectsScripts() {
         // only change origin if zooming in
         img.style.transformOrigin = `${LastMouseXY[0]}% ${mouseXY[1]}%`;
       }
+      else
+        img.style.cursor = "zoom-out";
     }
     // zoom out to screen size
     if (e.deltaY > 0) {
       if (zoomAmnt > 1) {
         zoomAmnt -= zoomStep;
-
+        img.style.cursor = "zoom-in";
       }
     }
     // set tranform scale
@@ -151,7 +92,6 @@ export function projectsScripts() {
 
   // eventListener for showing/hiding modal
   main.addEventListener("click", (e) => {
-    console.log(e.target);
     // if clicking a portfolio img, add a modal window if none is active
     if ((e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) && !modalActive) {
       addModal(e)

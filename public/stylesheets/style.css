@@ -296,6 +296,7 @@ article {
   height: 100vh;
   align-self: flex-end;
   width: auto;
+  cursor: zoom-in;
 }
 
 .modal-img-container {
