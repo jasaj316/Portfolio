@@ -18,8 +18,9 @@ let buttonDir = [
   [buttonContact, 2]
 ];
 
-// home page 
+// home page and hash
 let currentPage = pageDir[0];
+window.location = `#${currentPage[0]}`;
 
 // load scripts after fetching html
 function loadScripts() {
@@ -37,7 +38,7 @@ function loadScripts() {
 // fetching current html 
 function loadPage() {
   // fetch html as text
-  fetch(`./public/pages/${currentPage[0]}.html`)
+  fetch(`./public/pages/${window.location.href.split("#")[1]}.html`)
     .then(resp => {
       return resp.text();
     })
@@ -49,12 +50,19 @@ function loadPage() {
     })
 };
 
-
 // adding listeners to buttons
 buttonDir.forEach(btn => {
-  // change current page and reload
-  btn[0].addEventListener("click", () => { currentPage = pageDir[btn[1]]; loadPage(); });
+  // change current page and hash
+  btn[0].addEventListener("click", () => {
+    currentPage = pageDir[btn[1]];
+    window.location = `#${currentPage[0]}`;
+  });
 });
+//  ||
+//  \/
+// adding listener to hash change
+window.addEventListener("hashchange", e => loadPage())
 
-//when the page is created, load the home page
+
+// when site first loads, load the home page
 main.onload = loadPage();
