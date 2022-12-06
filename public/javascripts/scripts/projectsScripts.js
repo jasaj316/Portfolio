@@ -128,9 +128,10 @@ export function projectsScripts() {
     LastMouseXY = mouseXY;
   }
 
+  // main queryselector
+  let main = document.querySelector("main");
   function addModal(e) {
-    // select main and insert the modal "beforeend"
-    let main = document.querySelector("main");
+    // insert the modal "beforeend" of main
     main.insertAdjacentHTML("beforeend", `
     <div class="modal-bg"></div>
       <div class="modal-img-container">
@@ -149,7 +150,8 @@ export function projectsScripts() {
   }
 
   // eventListener for showing/hiding modal
-  window.addEventListener("click", (e) => {
+  main.addEventListener("click", (e) => {
+    console.log(e.target);
     // if clicking a portfolio img, add a modal window if none is active
     if ((e.target.nodeName == "IMG" && !e.target.hasAttribute("id")) && !modalActive) {
       addModal(e)

@@ -8,8 +8,7 @@ body {
   justify-content: flex-start;
   min-height: 100vh;
   font-size: 16px;
-  background-image: url("../images/bg.png");
-  background-color: #040611;
+  background-image: linear-gradient(#030614, #09091a);
   color: #f0eee9;
   font-family: "Inter", Helvetica, Arial, sans-serif;
   letter-spacing: 0.002rem;
@@ -46,7 +45,7 @@ h3 {
   position: absolute;
   z-index: 1;
   width: 100vw;
-  height: 124px;
+  height: 125px;
   background-image: url("../images/bg.png");
   background-color: #171820;
   border-radius: 0 0 0.1rem 0.1rem;
@@ -103,6 +102,11 @@ h3 {
   filter: grayscale(100%) brightness(150%);
 }
 
+@media (hover: none) {
+  .logo:hover img {
+    filter: grayscale(0%) brightness(100%);
+  }
+}
 
 
 .links {
@@ -378,7 +382,11 @@ form p>i>span {
 .about {
   display: flex;
   flex-direction: column;
-  text-indent: 1rem;
+  background: #1718217d;
+  border-radius: 0.1rem;
+  padding: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 1vw;
 }
 
 .about p {
