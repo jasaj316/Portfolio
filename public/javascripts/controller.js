@@ -18,53 +18,38 @@ let buttonDir = [
   [buttonContact, 2]
 ];
 
-function runCurrentScripts(currentHash) {
-  // iterate through pages
+
+function fetchCurrentPage() {
+  // make sure the current hash is valid
+  let hashIsCorrect = false;
   pageDir.forEach(page => {
-    // on the current page
-    if (currentHash == page[0]) {
+    // check for the current page
+    if (window.location.href.split("#")[1] === page[0]) {
+      // current hash is valid
+      hashIsCorrect = true;
+      // fetch page html
+      fetch(`./public/pages/${window.location.href.split("#")[1]}.html`)
+        .then(resp => {
+          return resp.text();
+        })
+        .then(text => {
+          // put it in main (ID=main)
+          main.innerHTML = text;
+        })
+      // run this page's scripts if they exist
       for (let i = 1; i < page.length; i++) {
-        // run this page's scripts if they exist
         if (page[i]) {
           page[i]();
           // remove reference to prevent duplicate scripts
           page[i] = false;
         }
       }
+      // set document title
+      document.title = document.title.split("|")[0] + ` | ${page[0].toUpperCase().slice(0, 1) + page[0].slice(1)}`;
     }
   })
-}
-
-function fetchCurrentPage() {
-  // get hash from url
-  let currentHash = window.location.href.split("#")[1];
-
-  // make sure the current hash is valid
-  let hashExists = false;
-  pageDir.forEach(page => {
-    // on the current page
-    if (currentHash == page[0]) {
-      hashExists = true;
-    }
-  })
-  // if current hash is valid
-  if (hashExists) {
-    // fetch html as text
-    fetch(`./public/pages/${currentHash}.html`)
-      .then(resp => {
-        return resp.text();
-      })
-      .then(text => {
-        // put it in main (ID=main)
-        main.innerHTML = text;
-        // set document title
-        document.title = document.title.split("|")[0] + ` | ${currentHash.toUpperCase().slice(0, 1) + currentHash.slice(1)}`
-        // run page's scripts
-        runCurrentScripts(currentHash);
-      })
-  }
-  // set hash to homepage if there is no hash / hash is invalid
-  if (!currentHash || currentHash == null || !hashExists) {
+  // set hash to homepage if hash is invalid
+  if (!hashIsCorrect) {
     window.location = `#${homePage[0]}`;
   }
 }
