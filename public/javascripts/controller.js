@@ -58,8 +58,7 @@ function fetchCurrentPage() {
         // put it in main (ID=main)
         main.innerHTML = text;
         // set document title
-        let title = document.title.split("|")[0] + ` | ${currentHash.toUpperCase().slice(0, 1) + currentHash.slice(1)}`
-        document.title = title
+        document.title = document.title.split("|")[0] + ` | ${currentHash.toUpperCase().slice(0, 1) + currentHash.slice(1)}`
         // run page's scripts
         runCurrentScripts(currentHash);
       })
