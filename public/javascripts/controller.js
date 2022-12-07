@@ -28,7 +28,7 @@ function fetchCurrentPage() {
       // current hash is valid
       hashIsCorrect = true;
       // fetch page html
-      fetch(`./public/pages/${window.location.href.split("#")[1]}.html`)
+      fetch(`./public/pages/${page[0]}.html`)
         .then(resp => {
           return resp.text();
         })
