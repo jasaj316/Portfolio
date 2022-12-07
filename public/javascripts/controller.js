@@ -7,14 +7,14 @@ import { contactScripts } from "./scripts/contactScripts.js";
 // directory of page titles and associated scripts
 const pageDir = [
   ["projects", projectsScripts],
-  ["about"],
+  ["bio"],
   ["contact", contactScripts]
 ];
 
 // directory of button ids and associated pageDir #
 let buttonDir = [
   [buttonLogo, 0],
-  [buttonAbout, 1],
+  [buttonBio, 1],
   [buttonContact, 2]
 ];
 
