@@ -69,17 +69,17 @@ h3 {
   align-items: center;
 }
 
-.logo .title {
+.logo .title-text {
   color: #f0eee9;
 
   margin-left: 1rem
 }
 
-.title h1 {
+.title-text h1 {
   font-size: 2.2rem;
 }
 
-.title h2 {
+.title-text h2 {
   font-size: 1.42rem;
 }
 
@@ -461,7 +461,7 @@ form p>i>span {
     margin: auto;
   }
 
-  .title {
+  .title-text {
     display: none;
   }
 
