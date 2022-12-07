@@ -491,10 +491,6 @@ form p>i>span {
 
 /* Tiny screens */
 @media only screen and (max-width: 400px) {
-  /* nav a:first-of-type {
-    display: none;
-  } */
-
   main {
     align-items: center;
   }
