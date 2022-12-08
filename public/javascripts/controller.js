@@ -81,9 +81,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
     document.cookie = `site=visited; expires=${new Date(2147483647 * 1000).toUTCString()}`;
   }
-  // check key value: 
-  // fetch(`https://api.countapi.xyz/info/jasaj316/value`)
-  //     .then(blob => blob.json())
-  //     .then(json => console.log(json.value))
-
 });
+
+/* check key value: 
+fetch(`https://api.countapi.xyz/get/jasaj316/value`)
+    .then(blob => blob.json())
+    .then(json => console.log(json.value))
+*/
