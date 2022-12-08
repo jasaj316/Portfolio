@@ -60,3 +60,30 @@ buttonDir.forEach(btn => btn[0].addEventListener("click", () => window.location 
 // adding listeners for changing pages
 let changeCurrentPageEvents = ["hashchange", "load"];
 changeCurrentPageEvents.forEach(e => window.addEventListener(e, fetchCurrentPage));
+
+
+// hit tracking
+window.addEventListener("DOMContentLoaded", () => {
+
+  // get list of cookies
+  let cookieList = [document.cookie.split(";"), false];
+  // if visited cookie exists, set to true
+  cookieList[0].forEach(cookie => {
+    if (cookie == "site=visited") {
+      cookieList[1] = true;
+    }
+  })
+  // if visited cookie does not exist, increment and set cookie
+  if (cookieList[1] == false) {
+    fetch(`https://api.countapi.xyz/hit/jasaj316/value`)
+      .then(blob => blob.json())
+      .then(json => console.log(json))
+
+    document.cookie = `site=visited; expires=${new Date(2147483647 * 1000).toUTCString()}`;
+  }
+  // check key value: 
+  // fetch(`https://api.countapi.xyz/info/jasaj316/value`)
+  //     .then(blob => blob.json())
+  //     .then(json => console.log(json.value))
+
+});
