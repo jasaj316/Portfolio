@@ -1,7 +1,6 @@
 export function projectsScripts() {
   // Modal Images
   let modalActive = false;
-
   function removeModal() {
     // enable scrolling
     document.body.style.overflow = 'visible';
