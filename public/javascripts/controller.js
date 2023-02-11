@@ -4,7 +4,7 @@ import { contactScripts } from "./scripts/contactScripts.js";
 
 // directory of page titles and associated scripts
 const pageDir = [
-  ["3d-art", projectsScripts],
+  ["3D-art", projectsScripts],
   ["bio"],
   ["contact", contactScripts]
 ];
