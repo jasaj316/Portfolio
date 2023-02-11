@@ -1,4 +1,4 @@
-function contactScripts() {
+export function contactScripts() {
   const subject = document.querySelector("#subject");
   const body = document.querySelector("#body");
   const formButton = document.querySelector(".form-button");
@@ -8,4 +8,3 @@ function contactScripts() {
     formButton.href = `mailto:jasaj316@gmail.com?subject=${subject.value}&body=${body.value}`;
   });
 }
-export default contactScripts;
