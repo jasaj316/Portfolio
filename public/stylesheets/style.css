@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@600&display=swap');
 
+html {
+  color: #e0dfdc;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -9,7 +13,6 @@ body {
   min-height: 100vh;
   font-size: 16px;
   background-image: linear-gradient(#030614, #09091a);
-  color: #f0eee9;
   font-family: "Inter", Helvetica, Arial, sans-serif;
   letter-spacing: 0.002rem;
 }
@@ -71,8 +74,6 @@ h3 {
 }
 
 .logo .title-text {
-  color: #f0eee9;
-
   margin-left: 1rem
 }
 
@@ -238,13 +239,19 @@ article {
 .card h3,
 .card-vid h3 {
   margin-top: calc(1rem - 1vw);
-  margin-bottom: 1rem;
-  font-size: 1.05vw;
+  margin-bottom: .75rem;
+  font-size: 1.1vw;
 }
 
 .card h3 span,
 .card-vid h3 span {
   font-weight: lighter;
+}
+
+.card h4 {
+  font-weight: 500;
+  font-size: 0.95vw;
+  margin-bottom: .75rem;
 }
 
 .card img {
