@@ -225,6 +225,7 @@ article {
   flex-direction: column;
   align-items: center;
   background: #1718217d;
+  border: 1px inset #ffffff0a;
   border-radius: 0.1rem;
   padding: 1vw;
   display: flex;
@@ -234,13 +235,18 @@ article {
 
 .card-vid {
   grid-column-start: span 2;
+  justify-content: end;
 }
 
 .card h3,
 .card-vid h3 {
   margin-top: calc(1rem - 1vw);
   margin-bottom: .6rem;
-  font-size: 1.1vw;
+  font-size: 1.2vw;
+}
+
+.card-vid h3 {
+  transform: translateY(-0.6rem);
 }
 
 .card h3 span,
@@ -437,6 +443,7 @@ form p>i>span {
 
   .card-vid h3 {
     font-size: calc(.6rem + 1.2vw);
+    transform: translateY(0);
   }
 
   /* nav */
