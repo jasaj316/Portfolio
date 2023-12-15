@@ -239,7 +239,7 @@ article {
 .card h3,
 .card-vid h3 {
   margin-top: calc(1rem - 1vw);
-  margin-bottom: .75rem;
+  margin-bottom: .6rem;
   font-size: 1.1vw;
 }
 
@@ -251,7 +251,7 @@ article {
 .card h4 {
   font-weight: 500;
   font-size: 0.95vw;
-  margin-bottom: .75rem;
+  margin-bottom: .6rem;
 }
 
 .card img {
