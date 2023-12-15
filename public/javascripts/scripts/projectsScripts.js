@@ -4,6 +4,7 @@ export function projectsScripts() {
   function removeModal() {
     // enable scrolling
     document.body.style.overflow = 'visible';
+    document.body.style.paddingRight = '0px';
     // remove modal elements
     let oldBg = document.querySelector(".modal-bg");
     let oldImg = document.querySelector(".modal-img-container");
@@ -80,6 +81,8 @@ export function projectsScripts() {
   `);
     // modalActive is true
     modalActive = true;
+    //detect scrollbar width
+    document.body.style.paddingRight = `${window.innerWidth - document.body.clientWidth}px`;
     // prevent scrolling
     document.body.style.overflow = 'hidden';
     // add eventListener on image for scrolling
