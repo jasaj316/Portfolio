@@ -79,7 +79,7 @@ window.addEventListener("DOMContentLoaded", () => {
       .then(blob => blob.json())
       .then(json => console.log(json))
 
-    document.cookie = `site=visited; expires=${new Date(2147483647 * 1000).toUTCString()}`;
+    document.cookie = `site=visited; expires=${new Date(2147483647 * 1000).toUTCString()}; SameSite=None; Secure`;
   }
 });
 
