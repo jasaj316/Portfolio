@@ -23,14 +23,14 @@ function fetchCurrentPage() {
   document.querySelectorAll('iframe').forEach(i => { i.src = i.src });
   // make sure the current hash is valid by setting it false
   let hashIsCorrect = false;
+  // for each page in the pageDir,
   pageDir.forEach(page => {
-    // hide all pages
+    // hide this page
     document.querySelector(`#page-${page[0]}`)?.classList.add("hidden");
-    // check for the current page in pageDir
+    // is the current hash this page?
     if (window.location.href.split("#")[1] === page[0]) {
       // current hash is valid
       hashIsCorrect = true;
-
       // if current page hasn't been loaded yet, add it to the document, then run scripts
       if (page[1] === false) {
         // fetch page html
@@ -39,27 +39,28 @@ function fetchCurrentPage() {
             return resp.text();
           })
           .then(text => {
-            // create new div element with fetched html and id=page[0]
-            let tempEl = document.createElement("div");
-            tempEl.setAttribute("id", `page-${page[0]}`);
-            tempEl.innerHTML = text;
-            main.appendChild(tempEl);
+            // append div element to main with id=page[0] and innerHTML=fetched html
+            main.appendChild(Object.assign(document.createElement("div"), { id: `page-${page[0]}`, innerHTML: text }));
+            // set flag to true so a page only gets fetched once
             page[1] = true;
           });
-        // check if page element is valid before running scripts
-        let pageLoadInterval = setInterval(() => {
-          //  if valid, run this page's scripts if they exist. 
+        // check if a page element is ready (checks every 20 ms)
+        let pageReadyInterval = setInterval(() => {
+          //  if ready (element can be queryselected)
           if (main.querySelector(`#page-${page[0]}:last-child`)) {
-            clearInterval(pageLoadInterval);
-            for (let i = 2; i < page.length; i++) {
-              if (page[i]) {
-                page[i]();
+            // clear this interval, run this page's scripts if they exist. 
+            clearInterval(pageReadyInterval);
+            setTimeout(() => {
+              for (let i = 2; i < page.length; i++) {
+                if (page[i]) {
+                  page[i]();
+                }
               }
-            }
-          }
-        }, 10)
-      }
+            }, 20);
 
+          }
+        }, 20)
+      }
       // unhide this page
       document.querySelector(`#page-${page[0]}`)?.classList.remove("hidden");
       // set document title
