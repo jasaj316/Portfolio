@@ -327,11 +327,11 @@ article {
   padding: 3em 1em 3em 1em;
   width: 2em;
   position: fixed;
-  top: calc(50vh - 3.6em);
+  top: calc(50vh - 4.7em);
   left: 0;
   right: auto;
   height: auto;
-  border: 2px solid #171a20;
+  border: 2px solid #f0efea;
   border-left: none;
   border-radius: 0 0.2rem 0.2rem 0;
   font-size: 1.8em;
@@ -343,12 +343,12 @@ article {
 
 #modal>div p:hover {
   color: #f3aa0c;
-  border: 2px solid #f3aa0c;
+  border-color: #f3aa0c;
   border-left: none;
 }
 
 #modal>div p:last-of-type {
-  border-left: 2px solid #171a20;
+  border-left: 2px solid #f0efea;
   border-right: none;
   border-radius: 0.2rem 0 0 0.2rem;
   right: 0;
@@ -356,21 +356,20 @@ article {
 }
 
 #modal>div p:last-of-type:hover {
-  border: 2px solid #f3aa0c;
+  border-color: #f3aa0c;
   border-right: none;
 }
 
+/* shrink img if the screen is too thin */
 @media screen and (max-aspect-ratio: 2/3) {
   #modal .img-container img {
     height: auto;
     width: 100vw;
-
   }
 
   #modal .img-container h2 {
     font-size: 4.8vw;
     max-width: 100vw;
-
   }
 }
 
@@ -451,14 +450,17 @@ form p>i>span {
 
 /* touch screen remove hovers */
 @media (hover: none) {
-  .logo:hover img {
-    filter: grayscale(0%) brightness(100%);
+  #logo-img {
+    background-image: url(../images/icon-fill.png);
   }
 
   nav a:hover {
     color: unset;
     background-color: unset;
-    font-weight: unset;
+  }
+
+  .card img {
+    border: none;
   }
 
   .card img:hover {
@@ -466,13 +468,13 @@ form p>i>span {
   }
 
   #modal>div p {
-    border: 2px solid #171a20;
+    border-color: #f0efea;
   }
 
   #modal>div p:hover,
   #modal>div p:last-of-type:hover {
     color: #f0efea;
-    border: 2px solid #171a20;
+    border-color: #f0efea;
   }
 }
 
@@ -509,7 +511,6 @@ form p>i>span {
     padding-left: calc(.6rem + 1.4vw);
     padding-right: calc(.6rem + 1.4vw);
   }
-
 }
 
 

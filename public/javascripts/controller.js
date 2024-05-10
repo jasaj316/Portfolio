@@ -1,6 +1,6 @@
 // import scripts
 import { projectsScriptsLoad, projectsScriptsUnload } from "./scripts/projectsScripts.js";
-import { contactScriptsLoad, contactScriptsUnload } from "./scripts/contactScripts.js";
+import { contactScriptsLoad } from "./scripts/contactScripts.js";
 
 // directory of page titles, is html loaded?, and associated load scripts
 const pageDir = [
@@ -21,7 +21,6 @@ const buttonDir = [
 // unload anything that needs to be unloaded before switching pages
 function unloadCurrentPage() {
   projectsScriptsUnload();
-  contactScriptsUnload();
   loadCurrentPage();
 }
 

@@ -6,7 +6,3 @@ export function contactScriptsLoad() {
   // populate email text
   document.querySelector("#form-email span").innerHTML = "jasaj316@gmail.com";
 }
-
-// nothing to unload
-export function contactScriptsUnload() {
-}

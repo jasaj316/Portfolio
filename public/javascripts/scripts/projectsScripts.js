@@ -53,14 +53,15 @@ export function projectsScriptsLoad() {
     modal.close();
   });
 
-  // once the modal image is loaded, show modal, assign title according to current img
+  // once the modal image is loaded, assign title according to current img, show modal 
   modalImg.addEventListener("load", () => {
-    modal.showModal();
     cards.forEach(card => {
       if (modalImg.src === card.img.src) {
         modalTitle.innerHTML = card.title.innerHTML;
       }
     })
+    modal.showModal();
+
   });
 
   //when going left/right, set the modal image's src to the privious or next card img's src
@@ -77,12 +78,12 @@ export function projectsScriptsLoad() {
     else if (e.key === "ArrowRight")
       loadImg(e, "R");
   });
-
   // when clicking on a card img, set the modal image's src to the card img's src
   document.addEventListener("click", (e) => {
     loadImg(e);
   });
 }
+
 
 // unloads modal and resets video
 export function projectsScriptsUnload() {
