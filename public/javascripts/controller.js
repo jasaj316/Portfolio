@@ -1,12 +1,12 @@
 // import scripts
-import { projectsScripts } from "./scripts/projectsScripts.js";
-import { contactScripts } from "./scripts/contactScripts.js";
+import { projectsScriptsLoad, projectsScriptsUnload } from "./scripts/projectsScripts.js";
+import { contactScriptsLoad, contactScriptsUnload } from "./scripts/contactScripts.js";
 
-// directory of page titles, is html loaded?, and associated scripts
+// directory of page titles, is html loaded?, and associated load scripts
 const pageDir = [
-  ["3D-art", false, projectsScripts],
+  ["3D-art", false, projectsScriptsLoad],
   ["bio", false],
-  ["contact", false, contactScripts]
+  ["contact", false, contactScriptsLoad]
 ];
 // set homepage to a pageDir #
 const homePage = pageDir[0];
@@ -18,9 +18,15 @@ const buttonDir = [
   [buttonContact, 2]
 ];
 
-function fetchCurrentPage() {
-  // stop youtube when changing page
-  document.querySelectorAll('iframe').forEach(i => { i.src = i.src });
+// unload anything that needs to be unloaded before switching pages
+function unloadCurrentPage() {
+  projectsScriptsUnload();
+  contactScriptsUnload();
+  loadCurrentPage();
+}
+
+// fetches current page if not yet fetched, unhide/hide pages and set title
+function loadCurrentPage() {
   // make sure the current hash is valid by setting it false
   let hashIsCorrect = false;
   // for each page in the pageDir,
@@ -57,7 +63,6 @@ function fetchCurrentPage() {
                 }
               }
             }, 20);
-
           }
         }, 20)
       }
@@ -73,9 +78,12 @@ function fetchCurrentPage() {
   }
 }
 
-// adding listeners to button events   // Changes current hash to the button's associated pageDir #
-buttonDir.forEach(btn => btn[0].addEventListener("click", () => window.location = `#${pageDir[btn[1]][0]}`));
+// adding listeners to button events 
+buttonDir.forEach(btn => btn[0].addEventListener("click", () => {
+  // Changes current hash to the button's associated pageDir #
+  window.location = `#${pageDir[btn[1]][0]}`;
+}));
 
-// adding listeners for changing pages
+// adding listeners for changing pages, either by hashchange or load
 let changeCurrentPageEvents = ["hashchange", "load"];
-changeCurrentPageEvents.forEach(e => window.addEventListener(e, fetchCurrentPage));
+changeCurrentPageEvents.forEach(e => window.addEventListener(e, unloadCurrentPage));

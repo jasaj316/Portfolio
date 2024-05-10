@@ -1,4 +1,4 @@
-export function projectsScripts() {
+export function projectsScriptsLoad() {
   // modal elements
   let modal = document.querySelector("#modal");
   let modalImg = document.querySelector("#modal>div img");
@@ -44,13 +44,6 @@ export function projectsScripts() {
           }
       }
     }
-    // assign title according to current img
-    cards.forEach(card => {
-      if (modalImg.src === card.img.src) {
-        modalTitle.innerHTML = card.title.innerHTML;
-      }
-    })
-
     // stop modal listener from receiving event
     e.stopPropagation();
   }
@@ -60,9 +53,14 @@ export function projectsScripts() {
     modal.close();
   });
 
-  // once the modal image is loaded, show modal
+  // once the modal image is loaded, show modal, assign title according to current img
   modalImg.addEventListener("load", () => {
     modal.showModal();
+    cards.forEach(card => {
+      if (modalImg.src === card.img.src) {
+        modalTitle.innerHTML = card.title.innerHTML;
+      }
+    })
   });
 
   //when going left/right, set the modal image's src to the privious or next card img's src
@@ -80,9 +78,14 @@ export function projectsScripts() {
       loadImg(e, "R");
   });
 
-
   // when clicking on a card img, set the modal image's src to the card img's src
   document.addEventListener("click", (e) => {
     loadImg(e);
   });
+}
+
+// unloads modal and resets video
+export function projectsScriptsUnload() {
+  document.querySelector("#modal")?.close();
+  document.querySelectorAll('iframe')?.forEach(i => { i.src = i.src });
 }
